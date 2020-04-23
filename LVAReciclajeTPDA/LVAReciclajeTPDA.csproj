@@ -100,6 +100,12 @@
     <Compile Include="FrmProvider.Designer.cs">
       <DependentUpon>FrmProvider.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPurchase.Designer.cs">
+      <DependentUpon>FrmPurchase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202004150325155_AppReciclaje.cs" />
     <Compile Include="Migrations\202004150325155_AppReciclaje.designer.cs">
       <DependentUpon>202004150325155_AppReciclaje.cs</DependentUpon>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProvider.resx">
       <DependentUpon>FrmProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPurchase.resx">
+      <DependentUpon>FrmPurchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004150325155_AppReciclaje.resx">
       <DependentUpon>202004150325155_AppReciclaje.cs</DependentUpon>
