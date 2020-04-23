@@ -1,2 +1,0 @@
-# LVARECICLAJEFINAL
-App Reciclaje
