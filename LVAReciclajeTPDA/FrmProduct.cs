@@ -94,17 +94,19 @@ namespace LVAReciclajeTPDA
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            pnlDatos.Enabled = false;
-            productBindingSource.ResetBindings(false);
-            FrmProduct_Load(sender, e);
-        }
+      
 
         private void grdDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Product product = productBindingSource.Current as Product;
             
+        }
+
+        private void btnSalirr_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = false;
+            productBindingSource.ResetBindings(false);
+            FrmProduct_Load(sender, e);
         }
     }
 }

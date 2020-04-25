@@ -9,11 +9,11 @@ namespace LVAReciclajeTPDA.Data
         public int Id { get; set; }
         public string FullNameSeller { get; set; }
         public int SellerPhone { get; set; }
-        public char SellerEmail { get; set; }
+        public string SellerEmail { get; set; }
         public string BuyerName { get; set; }
         public string FullNameBuyer { get; set; }
         public int BuyerPhone { get; set; }
-        public char BuyerEmail { get; set; }
+        public string BuyerEmail { get; set; }
         public string Product { get; set; }
         public string Billing { get; set; }
         public string SendTo { get; set; }
