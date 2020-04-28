@@ -261,6 +261,7 @@
     <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.Product.datasource" />
     <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.Provider.datasource" />
     <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.Purchase.datasource" />
+    <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.Sale.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
