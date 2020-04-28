@@ -655,7 +655,7 @@
             // 
             // saleBindingSource
             // 
-            this.saleBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Sale);
+           // this.saleBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Sale);
             // 
             // FrmSale
             // 
