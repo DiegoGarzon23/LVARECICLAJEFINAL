@@ -698,7 +698,7 @@
             // 
             // employeeBindingSource
             // 
-            this.employeeBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Employee);
+//            this.employeeBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Employee);
             // 
             // idDataGridViewTextBoxColumn
             // 

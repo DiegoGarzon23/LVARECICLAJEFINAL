@@ -206,7 +206,7 @@
             // 
             // clientBindingSource
             // 
-            this.clientBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Client);
+            //this.clientBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Client);
             // 
             // pnlDatos
             // 

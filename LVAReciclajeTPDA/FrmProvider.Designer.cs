@@ -603,7 +603,7 @@
             // 
             // providerBindingSource
             // 
-            this.providerBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Provider);
+//            this.providerBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Provider);
             // 
             // idDataGridViewTextBoxColumn
             // 

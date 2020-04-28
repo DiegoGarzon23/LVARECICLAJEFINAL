@@ -181,7 +181,7 @@
             // 
             // productBindingSource
             // 
-            this.productBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Product);
+//            this.productBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Product);
             // 
             // pnlDatos
             // 
