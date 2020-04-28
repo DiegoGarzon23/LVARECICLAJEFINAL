@@ -171,12 +171,6 @@
     <Compile Include="FrmProvider.Designer.cs">
       <DependentUpon>FrmProvider.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPruevasiyafuncionosiuu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPruevasiyafuncionosiuu.Designer.cs">
-      <DependentUpon>frmPruevasiyafuncionosiuu.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPurchase.cs">
       <SubType>Form</SubType>
     </Compile>
