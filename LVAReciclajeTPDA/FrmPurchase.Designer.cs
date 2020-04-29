@@ -66,6 +66,12 @@
             this.lblId = new MetroFramework.Controls.MetroLabel();
             this.grdPurchase = new MetroFramework.Controls.MetroGrid();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroButton5 = new MetroFramework.Controls.MetroButton();
+            this.metroButton6 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseBindingSource)).BeginInit();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPurchase)).BeginInit();
@@ -652,14 +658,86 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(240, 150);
+            this.metroGrid1.Size = new System.Drawing.Size(331, 251);
             this.metroGrid1.TabIndex = 69;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackColor = System.Drawing.Color.Maroon;
+            this.metroButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.metroButton1.Location = new System.Drawing.Point(1075, 429);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(44, 31);
+            this.metroButton1.TabIndex = 75;
+            this.metroButton1.Text = "Salir";
+            this.metroButton1.UseSelectable = true;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.Color.Maroon;
+            this.metroButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.metroButton2.Location = new System.Drawing.Point(990, 429);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(67, 31);
+            this.metroButton2.TabIndex = 74;
+            this.metroButton2.Text = "Eliminar";
+            this.metroButton2.UseSelectable = true;
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.BackColor = System.Drawing.Color.Maroon;
+            this.metroButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.metroButton3.Location = new System.Drawing.Point(776, 429);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(58, 31);
+            this.metroButton3.TabIndex = 73;
+            this.metroButton3.Text = "Buscar";
+            this.metroButton3.UseSelectable = true;
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.BackColor = System.Drawing.Color.Maroon;
+            this.metroButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.metroButton4.Location = new System.Drawing.Point(909, 429);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(57, 31);
+            this.metroButton4.TabIndex = 72;
+            this.metroButton4.Text = "Editar";
+            this.metroButton4.UseSelectable = true;
+            // 
+            // metroButton5
+            // 
+            this.metroButton5.BackColor = System.Drawing.Color.Maroon;
+            this.metroButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.metroButton5.Location = new System.Drawing.Point(850, 429);
+            this.metroButton5.Name = "metroButton5";
+            this.metroButton5.Size = new System.Drawing.Size(50, 31);
+            this.metroButton5.TabIndex = 71;
+            this.metroButton5.Text = "Agregar";
+            this.metroButton5.UseSelectable = true;
+            // 
+            // metroButton6
+            // 
+            this.metroButton6.BackColor = System.Drawing.Color.Black;
+            this.metroButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.metroButton6.Location = new System.Drawing.Point(700, 429);
+            this.metroButton6.Name = "metroButton6";
+            this.metroButton6.Size = new System.Drawing.Size(58, 31);
+            this.metroButton6.TabIndex = 70;
+            this.metroButton6.Text = "Guardar";
+            this.metroButton6.UseSelectable = true;
             // 
             // FrmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 598);
+            this.ClientSize = new System.Drawing.Size(1128, 598);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.metroButton4);
+            this.Controls.Add(this.metroButton5);
+            this.Controls.Add(this.metroButton6);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.grdPurchase);
             this.Controls.Add(this.btnSalir);
@@ -729,5 +807,11 @@
         private MetroFramework.Controls.MetroLabel lblId;
         private MetroFramework.Controls.MetroGrid grdPurchase;
         private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton metroButton5;
+        private MetroFramework.Controls.MetroButton metroButton6;
     }
 }
