@@ -33,19 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnamesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rfcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.curpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.txtCodee = new MetroFramework.Controls.MetroTextBox();
+            this.lblCodee = new MetroFramework.Controls.MetroLabel();
             this.pctFoto = new System.Windows.Forms.PictureBox();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.txtAdress = new MetroFramework.Controls.MetroTextBox();
@@ -71,8 +62,6 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
-            this.txtCodee = new MetroFramework.Controls.MetroTextBox();
-            this.lblCodee = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -96,18 +85,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.surnamesDataGridViewTextBoxColumn,
-            this.rfcDataGridViewTextBoxColumn,
-            this.curpDataGridViewTextBoxColumn,
-            this.phoneDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.postalCodeDataGridViewTextBoxColumn,
-            this.contactDataGridViewTextBoxColumn,
-            this.employeesDataGridViewTextBoxColumn,
-            this.salesDataGridViewTextBoxColumn});
             this.grdDatos.DataSource = this.clientBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -136,77 +113,6 @@
             this.grdDatos.Size = new System.Drawing.Size(249, 301);
             this.grdDatos.TabIndex = 0;
             this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // surnamesDataGridViewTextBoxColumn
-            // 
-            this.surnamesDataGridViewTextBoxColumn.DataPropertyName = "Surnames";
-            this.surnamesDataGridViewTextBoxColumn.HeaderText = "Surnames";
-            this.surnamesDataGridViewTextBoxColumn.Name = "surnamesDataGridViewTextBoxColumn";
-            // 
-            // rfcDataGridViewTextBoxColumn
-            // 
-            this.rfcDataGridViewTextBoxColumn.DataPropertyName = "Rfc";
-            this.rfcDataGridViewTextBoxColumn.HeaderText = "Rfc";
-            this.rfcDataGridViewTextBoxColumn.Name = "rfcDataGridViewTextBoxColumn";
-            // 
-            // curpDataGridViewTextBoxColumn
-            // 
-            this.curpDataGridViewTextBoxColumn.DataPropertyName = "Curp";
-            this.curpDataGridViewTextBoxColumn.HeaderText = "Curp";
-            this.curpDataGridViewTextBoxColumn.Name = "curpDataGridViewTextBoxColumn";
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // postalCodeDataGridViewTextBoxColumn
-            // 
-            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "PostalCode";
-            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "PostalCode";
-            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
-            // 
-            // contactDataGridViewTextBoxColumn
-            // 
-            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
-            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
-            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
-            // 
-            // employeesDataGridViewTextBoxColumn
-            // 
-            this.employeesDataGridViewTextBoxColumn.DataPropertyName = "Employees";
-            this.employeesDataGridViewTextBoxColumn.HeaderText = "Employees";
-            this.employeesDataGridViewTextBoxColumn.Name = "employeesDataGridViewTextBoxColumn";
-            // 
-            // salesDataGridViewTextBoxColumn
-            // 
-            this.salesDataGridViewTextBoxColumn.DataPropertyName = "Sales";
-            this.salesDataGridViewTextBoxColumn.HeaderText = "Sales";
-            this.salesDataGridViewTextBoxColumn.Name = "salesDataGridViewTextBoxColumn";
-            // 
-            // clientBindingSource
-            // 
-            //this.clientBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Client);
             // 
             // pnlDatos
             // 
@@ -239,6 +145,46 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            // 
+            // txtCodee
+            // 
+            // 
+            // 
+            // 
+            this.txtCodee.CustomButton.Image = null;
+            this.txtCodee.CustomButton.Location = new System.Drawing.Point(199, 1);
+            this.txtCodee.CustomButton.Name = "";
+            this.txtCodee.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCodee.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCodee.CustomButton.TabIndex = 1;
+            this.txtCodee.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCodee.CustomButton.UseSelectable = true;
+            this.txtCodee.CustomButton.Visible = false;
+            this.txtCodee.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "PostalCode", true));
+            this.txtCodee.Lines = new string[0];
+            this.txtCodee.Location = new System.Drawing.Point(294, 154);
+            this.txtCodee.MaxLength = 32767;
+            this.txtCodee.Name = "txtCodee";
+            this.txtCodee.PasswordChar = '\0';
+            this.txtCodee.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCodee.SelectedText = "";
+            this.txtCodee.SelectionLength = 0;
+            this.txtCodee.SelectionStart = 0;
+            this.txtCodee.ShortcutsEnabled = true;
+            this.txtCodee.Size = new System.Drawing.Size(221, 23);
+            this.txtCodee.TabIndex = 22;
+            this.txtCodee.UseSelectable = true;
+            this.txtCodee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCodee.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblCodee
+            // 
+            this.lblCodee.AutoSize = true;
+            this.lblCodee.Location = new System.Drawing.Point(205, 153);
+            this.lblCodee.Name = "lblCodee";
+            this.lblCodee.Size = new System.Drawing.Size(91, 19);
+            this.lblCodee.TabIndex = 21;
+            this.lblCodee.Text = "Codigo Postal";
             // 
             // pctFoto
             // 
@@ -681,46 +627,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseSelectable = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtCodee
-            // 
-            // 
-            // 
-            // 
-            this.txtCodee.CustomButton.Image = null;
-            this.txtCodee.CustomButton.Location = new System.Drawing.Point(199, 1);
-            this.txtCodee.CustomButton.Name = "";
-            this.txtCodee.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtCodee.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtCodee.CustomButton.TabIndex = 1;
-            this.txtCodee.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCodee.CustomButton.UseSelectable = true;
-            this.txtCodee.CustomButton.Visible = false;
-            this.txtCodee.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "PostalCode", true));
-            this.txtCodee.Lines = new string[0];
-            this.txtCodee.Location = new System.Drawing.Point(294, 154);
-            this.txtCodee.MaxLength = 32767;
-            this.txtCodee.Name = "txtCodee";
-            this.txtCodee.PasswordChar = '\0';
-            this.txtCodee.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCodee.SelectedText = "";
-            this.txtCodee.SelectionLength = 0;
-            this.txtCodee.SelectionStart = 0;
-            this.txtCodee.ShortcutsEnabled = true;
-            this.txtCodee.Size = new System.Drawing.Size(221, 23);
-            this.txtCodee.TabIndex = 22;
-            this.txtCodee.UseSelectable = true;
-            this.txtCodee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCodee.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblCodee
-            // 
-            this.lblCodee.AutoSize = true;
-            this.lblCodee.Location = new System.Drawing.Point(205, 153);
-            this.lblCodee.Name = "lblCodee";
-            this.lblCodee.Size = new System.Drawing.Size(91, 19);
-            this.lblCodee.TabIndex = 21;
-            this.lblCodee.Text = "Codigo Postal";
             // 
             // FrmClient
             // 
