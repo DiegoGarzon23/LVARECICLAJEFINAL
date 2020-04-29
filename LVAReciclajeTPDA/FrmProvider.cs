@@ -135,5 +135,7 @@ namespace LVAReciclajeTPDA
             else
                 pctFoto.Image = null;
         }
+
+     
     }
 }

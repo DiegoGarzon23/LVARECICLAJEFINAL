@@ -142,7 +142,6 @@
     <Compile Include="Data\IEntity.cs" />
     <Compile Include="Data\Product.cs" />
     <Compile Include="Data\Provider.cs" />
-    <Compile Include="Data\Prueba.cs" />
     <Compile Include="Data\Purchase.cs" />
     <Compile Include="Data\PurchaseDetail.cs" />
     <Compile Include="Data\Sale.cs" />

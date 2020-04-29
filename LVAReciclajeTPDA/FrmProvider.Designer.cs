@@ -66,6 +66,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             this.SuspendLayout();
             // 
+            // providerBindingSource
+            // 
+    
+            // 
             // pnlDatos
             // 
             this.pnlDatos.Controls.Add(this.cbmCiudad);

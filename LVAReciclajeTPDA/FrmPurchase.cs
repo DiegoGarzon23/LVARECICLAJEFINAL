@@ -1,7 +1,9 @@
-﻿using System;
+﻿using LVAReciclajeTPDA.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -114,6 +116,16 @@ namespace LVAReciclajeTPDA
             pnlDatos.Enabled = false;
             purchaseBindingSource.ResetBindings(false);
             FrmPurchase_Load(sender, e);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
