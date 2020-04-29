@@ -38,7 +38,6 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
-            this.purchaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtPrecioUnitario = new MetroFramework.Controls.MetroTextBox();
             this.lblTipoDeProducto = new MetroFramework.Controls.MetroLabel();
             this.lblNombreProv = new MetroFramework.Controls.MetroLabel();
@@ -49,6 +48,7 @@
             this.txtNombreDelProveedor = new MetroFramework.Controls.MetroTextBox();
             this.txtTipoDeProducto = new MetroFramework.Controls.MetroTextBox();
             this.txtCodigo = new MetroFramework.Controls.MetroTextBox();
+            this.purchaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +78,7 @@
             this.pnlDatos.HorizontalScrollbarSize = 10;
             this.pnlDatos.Location = new System.Drawing.Point(23, 75);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(824, 428);
+            this.pnlDatos.Size = new System.Drawing.Size(826, 428);
             this.pnlDatos.TabIndex = 0;
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;

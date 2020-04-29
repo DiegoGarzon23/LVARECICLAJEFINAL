@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
-            this.cbmCiudad = new MetroFramework.Controls.MetroComboBox();
+            this.cbmCity = new MetroFramework.Controls.MetroComboBox();
             this.txtWeb = new MetroFramework.Controls.MetroTextBox();
             this.lblWeb = new MetroFramework.Controls.MetroLabel();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
@@ -42,25 +42,38 @@
             this.lblPhone = new MetroFramework.Controls.MetroLabel();
             this.txtCodee = new MetroFramework.Controls.MetroTextBox();
             this.lblCodee = new MetroFramework.Controls.MetroLabel();
-            this.lblCiudad = new MetroFramework.Controls.MetroLabel();
-            this.txtMarca = new MetroFramework.Controls.MetroTextBox();
-            this.txtNombreEmpresa = new MetroFramework.Controls.MetroTextBox();
-            this.lblMarca = new MetroFramework.Controls.MetroLabel();
-            this.lblEnterpriseName = new MetroFramework.Controls.MetroLabel();
+            this.lblCity = new MetroFramework.Controls.MetroLabel();
+            this.txtBrand = new MetroFramework.Controls.MetroTextBox();
+            this.lblBrand = new MetroFramework.Controls.MetroLabel();
             this.txtAdress = new MetroFramework.Controls.MetroTextBox();
             this.lblAdress = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
             this.lblId = new MetroFramework.Controls.MetroLabel();
             this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.txtBilling = new MetroFramework.Controls.MetroTextBox();
+            this.lblBilling = new MetroFramework.Controls.MetroLabel();
+            this.txtQuantity = new MetroFramework.Controls.MetroTextBox();
+            this.lblQuantity = new MetroFramework.Controls.MetroLabel();
+            this.txtDescription = new MetroFramework.Controls.MetroTextBox();
+            this.lblDescription = new MetroFramework.Controls.MetroLabel();
+            this.pctSale = new System.Windows.Forms.PictureBox();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSale)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatos
             // 
-            this.pnlDatos.Controls.Add(this.cbmCiudad);
+            this.pnlDatos.Controls.Add(this.pctSale);
+            this.pnlDatos.Controls.Add(this.txtDescription);
+            this.pnlDatos.Controls.Add(this.lblDescription);
+            this.pnlDatos.Controls.Add(this.txtQuantity);
+            this.pnlDatos.Controls.Add(this.lblQuantity);
+            this.pnlDatos.Controls.Add(this.txtBilling);
+            this.pnlDatos.Controls.Add(this.lblBilling);
+            this.pnlDatos.Controls.Add(this.cbmCity);
             this.pnlDatos.Controls.Add(this.txtWeb);
             this.pnlDatos.Controls.Add(this.lblWeb);
             this.pnlDatos.Controls.Add(this.txtEmail);
@@ -69,11 +82,9 @@
             this.pnlDatos.Controls.Add(this.lblPhone);
             this.pnlDatos.Controls.Add(this.txtCodee);
             this.pnlDatos.Controls.Add(this.lblCodee);
-            this.pnlDatos.Controls.Add(this.lblCiudad);
-            this.pnlDatos.Controls.Add(this.txtMarca);
-            this.pnlDatos.Controls.Add(this.txtNombreEmpresa);
-            this.pnlDatos.Controls.Add(this.lblMarca);
-            this.pnlDatos.Controls.Add(this.lblEnterpriseName);
+            this.pnlDatos.Controls.Add(this.lblCity);
+            this.pnlDatos.Controls.Add(this.txtBrand);
+            this.pnlDatos.Controls.Add(this.lblBrand);
             this.pnlDatos.Controls.Add(this.txtAdress);
             this.pnlDatos.Controls.Add(this.lblAdress);
             this.pnlDatos.Controls.Add(this.txtId);
@@ -81,19 +92,19 @@
             this.pnlDatos.HorizontalScrollbarBarColor = true;
             this.pnlDatos.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlDatos.HorizontalScrollbarSize = 10;
-            this.pnlDatos.Location = new System.Drawing.Point(419, 43);
+            this.pnlDatos.Location = new System.Drawing.Point(294, 43);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(610, 176);
+            this.pnlDatos.Size = new System.Drawing.Size(623, 423);
             this.pnlDatos.TabIndex = 2;
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
             // 
-            // cbmCiudad
+            // cbmCity
             // 
-            this.cbmCiudad.FormattingEnabled = true;
-            this.cbmCiudad.ItemHeight = 23;
-            this.cbmCiudad.Items.AddRange(new object[] {
+            this.cbmCity.FormattingEnabled = true;
+            this.cbmCity.ItemHeight = 23;
+            this.cbmCity.Items.AddRange(new object[] {
             "Acatlán de Osorio",
             "Amozoc",
             "Atlixco",
@@ -111,11 +122,11 @@
             "Teziutlan",
             "Xicotepec",
             "Zacatlán"});
-            this.cbmCiudad.Location = new System.Drawing.Point(333, 3);
-            this.cbmCiudad.Name = "cbmCiudad";
-            this.cbmCiudad.Size = new System.Drawing.Size(259, 29);
-            this.cbmCiudad.TabIndex = 43;
-            this.cbmCiudad.UseSelectable = true;
+            this.cbmCity.Location = new System.Drawing.Point(121, 123);
+            this.cbmCity.Name = "cbmCity";
+            this.cbmCity.Size = new System.Drawing.Size(160, 29);
+            this.cbmCity.TabIndex = 43;
+            this.cbmCity.UseSelectable = true;
             // 
             // txtWeb
             // 
@@ -123,7 +134,7 @@
             // 
             // 
             this.txtWeb.CustomButton.Image = null;
-            this.txtWeb.CustomButton.Location = new System.Drawing.Point(237, 1);
+            this.txtWeb.CustomButton.Location = new System.Drawing.Point(138, 1);
             this.txtWeb.CustomButton.Name = "";
             this.txtWeb.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtWeb.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -132,7 +143,7 @@
             this.txtWeb.CustomButton.UseSelectable = true;
             this.txtWeb.CustomButton.Visible = false;
             this.txtWeb.Lines = new string[0];
-            this.txtWeb.Location = new System.Drawing.Point(333, 128);
+            this.txtWeb.Location = new System.Drawing.Point(121, 302);
             this.txtWeb.MaxLength = 32767;
             this.txtWeb.Name = "txtWeb";
             this.txtWeb.PasswordChar = '\0';
@@ -141,7 +152,7 @@
             this.txtWeb.SelectionLength = 0;
             this.txtWeb.SelectionStart = 0;
             this.txtWeb.ShortcutsEnabled = true;
-            this.txtWeb.Size = new System.Drawing.Size(259, 23);
+            this.txtWeb.Size = new System.Drawing.Size(160, 23);
             this.txtWeb.TabIndex = 37;
             this.txtWeb.UseSelectable = true;
             this.txtWeb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -150,7 +161,7 @@
             // lblWeb
             // 
             this.lblWeb.AutoSize = true;
-            this.lblWeb.Location = new System.Drawing.Point(241, 132);
+            this.lblWeb.Location = new System.Drawing.Point(58, 306);
             this.lblWeb.Name = "lblWeb";
             this.lblWeb.Size = new System.Drawing.Size(36, 19);
             this.lblWeb.TabIndex = 36;
@@ -162,7 +173,7 @@
             // 
             // 
             this.txtEmail.CustomButton.Image = null;
-            this.txtEmail.CustomButton.Location = new System.Drawing.Point(237, 1);
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(138, 1);
             this.txtEmail.CustomButton.Name = "";
             this.txtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -171,7 +182,7 @@
             this.txtEmail.CustomButton.UseSelectable = true;
             this.txtEmail.CustomButton.Visible = false;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(333, 99);
+            this.txtEmail.Location = new System.Drawing.Point(121, 255);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -180,7 +191,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(259, 23);
+            this.txtEmail.Size = new System.Drawing.Size(160, 23);
             this.txtEmail.TabIndex = 35;
             this.txtEmail.UseSelectable = true;
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -189,7 +200,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(243, 103);
+            this.lblEmail.Location = new System.Drawing.Point(53, 259);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(41, 19);
             this.lblEmail.TabIndex = 34;
@@ -201,7 +212,7 @@
             // 
             // 
             this.txtPhone.CustomButton.Image = null;
-            this.txtPhone.CustomButton.Location = new System.Drawing.Point(237, 1);
+            this.txtPhone.CustomButton.Location = new System.Drawing.Point(138, 1);
             this.txtPhone.CustomButton.Name = "";
             this.txtPhone.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPhone.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -210,7 +221,7 @@
             this.txtPhone.CustomButton.UseSelectable = true;
             this.txtPhone.CustomButton.Visible = false;
             this.txtPhone.Lines = new string[0];
-            this.txtPhone.Location = new System.Drawing.Point(333, 70);
+            this.txtPhone.Location = new System.Drawing.Point(121, 209);
             this.txtPhone.MaxLength = 32767;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
@@ -219,7 +230,7 @@
             this.txtPhone.SelectionLength = 0;
             this.txtPhone.SelectionStart = 0;
             this.txtPhone.ShortcutsEnabled = true;
-            this.txtPhone.Size = new System.Drawing.Size(259, 23);
+            this.txtPhone.Size = new System.Drawing.Size(160, 23);
             this.txtPhone.TabIndex = 33;
             this.txtPhone.UseSelectable = true;
             this.txtPhone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -228,7 +239,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(243, 74);
+            this.lblPhone.Location = new System.Drawing.Point(36, 213);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(58, 19);
             this.lblPhone.TabIndex = 32;
@@ -240,7 +251,7 @@
             // 
             // 
             this.txtCodee.CustomButton.Image = null;
-            this.txtCodee.CustomButton.Location = new System.Drawing.Point(237, 1);
+            this.txtCodee.CustomButton.Location = new System.Drawing.Point(138, 1);
             this.txtCodee.CustomButton.Name = "";
             this.txtCodee.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtCodee.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -249,7 +260,7 @@
             this.txtCodee.CustomButton.UseSelectable = true;
             this.txtCodee.CustomButton.Visible = false;
             this.txtCodee.Lines = new string[0];
-            this.txtCodee.Location = new System.Drawing.Point(333, 38);
+            this.txtCodee.Location = new System.Drawing.Point(121, 158);
             this.txtCodee.MaxLength = 32767;
             this.txtCodee.Name = "txtCodee";
             this.txtCodee.PasswordChar = '\0';
@@ -258,7 +269,7 @@
             this.txtCodee.SelectionLength = 0;
             this.txtCodee.SelectionStart = 0;
             this.txtCodee.ShortcutsEnabled = true;
-            this.txtCodee.Size = new System.Drawing.Size(259, 23);
+            this.txtCodee.Size = new System.Drawing.Size(160, 23);
             this.txtCodee.TabIndex = 31;
             this.txtCodee.UseSelectable = true;
             this.txtCodee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -267,98 +278,59 @@
             // lblCodee
             // 
             this.lblCodee.AutoSize = true;
-            this.lblCodee.Location = new System.Drawing.Point(241, 36);
+            this.lblCodee.Location = new System.Drawing.Point(3, 162);
             this.lblCodee.Name = "lblCodee";
             this.lblCodee.Size = new System.Drawing.Size(91, 19);
             this.lblCodee.TabIndex = 30;
             this.lblCodee.Text = "Codigo Postal";
             // 
-            // lblCiudad
+            // lblCity
             // 
-            this.lblCiudad.AutoSize = true;
-            this.lblCiudad.Location = new System.Drawing.Point(243, 7);
-            this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(51, 19);
-            this.lblCiudad.TabIndex = 28;
-            this.lblCiudad.Text = "Ciudad";
+            this.lblCity.AutoSize = true;
+            this.lblCity.Location = new System.Drawing.Point(36, 123);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(51, 19);
+            this.lblCity.TabIndex = 28;
+            this.lblCity.Text = "Ciudad";
             // 
-            // txtMarca
-            // 
-            // 
-            // 
-            // 
-            this.txtMarca.CustomButton.Image = null;
-            this.txtMarca.CustomButton.Location = new System.Drawing.Point(138, 1);
-            this.txtMarca.CustomButton.Name = "";
-            this.txtMarca.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtMarca.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtMarca.CustomButton.TabIndex = 1;
-            this.txtMarca.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtMarca.CustomButton.UseSelectable = true;
-            this.txtMarca.CustomButton.Visible = false;
-            this.txtMarca.Lines = new string[0];
-            this.txtMarca.Location = new System.Drawing.Point(75, 68);
-            this.txtMarca.MaxLength = 32767;
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.PasswordChar = '\0';
-            this.txtMarca.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtMarca.SelectedText = "";
-            this.txtMarca.SelectionLength = 0;
-            this.txtMarca.SelectionStart = 0;
-            this.txtMarca.ShortcutsEnabled = true;
-            this.txtMarca.Size = new System.Drawing.Size(160, 23);
-            this.txtMarca.TabIndex = 25;
-            this.txtMarca.UseSelectable = true;
-            this.txtMarca.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtMarca.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtNombreEmpresa
+            // txtBrand
             // 
             // 
             // 
             // 
-            this.txtNombreEmpresa.CustomButton.Image = null;
-            this.txtNombreEmpresa.CustomButton.Location = new System.Drawing.Point(138, 1);
-            this.txtNombreEmpresa.CustomButton.Name = "";
-            this.txtNombreEmpresa.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNombreEmpresa.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNombreEmpresa.CustomButton.TabIndex = 1;
-            this.txtNombreEmpresa.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNombreEmpresa.CustomButton.UseSelectable = true;
-            this.txtNombreEmpresa.CustomButton.Visible = false;
-            this.txtNombreEmpresa.Lines = new string[0];
-            this.txtNombreEmpresa.Location = new System.Drawing.Point(75, 35);
-            this.txtNombreEmpresa.MaxLength = 32767;
-            this.txtNombreEmpresa.Name = "txtNombreEmpresa";
-            this.txtNombreEmpresa.PasswordChar = '\0';
-            this.txtNombreEmpresa.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNombreEmpresa.SelectedText = "";
-            this.txtNombreEmpresa.SelectionLength = 0;
-            this.txtNombreEmpresa.SelectionStart = 0;
-            this.txtNombreEmpresa.ShortcutsEnabled = true;
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(160, 23);
-            this.txtNombreEmpresa.TabIndex = 23;
-            this.txtNombreEmpresa.UseSelectable = true;
-            this.txtNombreEmpresa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNombreEmpresa.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBrand.CustomButton.Image = null;
+            this.txtBrand.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtBrand.CustomButton.Name = "";
+            this.txtBrand.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBrand.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBrand.CustomButton.TabIndex = 1;
+            this.txtBrand.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBrand.CustomButton.UseSelectable = true;
+            this.txtBrand.CustomButton.Visible = false;
+            this.txtBrand.Lines = new string[0];
+            this.txtBrand.Location = new System.Drawing.Point(121, 46);
+            this.txtBrand.MaxLength = 32767;
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.PasswordChar = '\0';
+            this.txtBrand.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBrand.SelectedText = "";
+            this.txtBrand.SelectionLength = 0;
+            this.txtBrand.SelectionStart = 0;
+            this.txtBrand.ShortcutsEnabled = true;
+            this.txtBrand.Size = new System.Drawing.Size(160, 23);
+            this.txtBrand.TabIndex = 25;
+            this.txtBrand.UseSelectable = true;
+            this.txtBrand.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBrand.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // lblMarca
+            // lblBrand
             // 
-            this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(3, 68);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(46, 19);
-            this.lblMarca.TabIndex = 24;
-            this.lblMarca.Text = "Marca";
-            // 
-            // lblEnterpriseName
-            // 
-            this.lblEnterpriseName.AutoSize = true;
-            this.lblEnterpriseName.Location = new System.Drawing.Point(3, 39);
-            this.lblEnterpriseName.Name = "lblEnterpriseName";
-            this.lblEnterpriseName.Size = new System.Drawing.Size(60, 19);
-            this.lblEnterpriseName.TabIndex = 22;
-            this.lblEnterpriseName.Text = "Empresa";
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Location = new System.Drawing.Point(36, 50);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(46, 19);
+            this.lblBrand.TabIndex = 24;
+            this.lblBrand.Text = "Marca";
             // 
             // txtAdress
             // 
@@ -366,7 +338,7 @@
             // 
             // 
             this.txtAdress.CustomButton.Image = null;
-            this.txtAdress.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtAdress.CustomButton.Location = new System.Drawing.Point(178, 1);
             this.txtAdress.CustomButton.Name = "";
             this.txtAdress.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAdress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -375,7 +347,7 @@
             this.txtAdress.CustomButton.UseSelectable = true;
             this.txtAdress.CustomButton.Visible = false;
             this.txtAdress.Lines = new string[0];
-            this.txtAdress.Location = new System.Drawing.Point(75, 97);
+            this.txtAdress.Location = new System.Drawing.Point(121, 84);
             this.txtAdress.MaxLength = 32767;
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.PasswordChar = '\0';
@@ -384,7 +356,7 @@
             this.txtAdress.SelectionLength = 0;
             this.txtAdress.SelectionStart = 0;
             this.txtAdress.ShortcutsEnabled = true;
-            this.txtAdress.Size = new System.Drawing.Size(160, 23);
+            this.txtAdress.Size = new System.Drawing.Size(200, 23);
             this.txtAdress.TabIndex = 27;
             this.txtAdress.UseSelectable = true;
             this.txtAdress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -393,7 +365,7 @@
             // lblAdress
             // 
             this.lblAdress.AutoSize = true;
-            this.lblAdress.Location = new System.Drawing.Point(0, 97);
+            this.lblAdress.Location = new System.Drawing.Point(24, 88);
             this.lblAdress.Name = "lblAdress";
             this.lblAdress.Size = new System.Drawing.Size(63, 19);
             this.lblAdress.TabIndex = 26;
@@ -414,7 +386,7 @@
             this.txtId.CustomButton.UseSelectable = true;
             this.txtId.CustomButton.Visible = false;
             this.txtId.Lines = new string[0];
-            this.txtId.Location = new System.Drawing.Point(75, 6);
+            this.txtId.Location = new System.Drawing.Point(121, 13);
             this.txtId.MaxLength = 32767;
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
@@ -432,7 +404,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(3, 7);
+            this.lblId.Location = new System.Drawing.Point(67, 20);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(20, 19);
             this.lblId.TabIndex = 4;
@@ -481,6 +453,131 @@
             this.metroGrid1.Size = new System.Drawing.Size(240, 150);
             this.metroGrid1.TabIndex = 3;
             // 
+            // txtBilling
+            // 
+            // 
+            // 
+            // 
+            this.txtBilling.CustomButton.Image = null;
+            this.txtBilling.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtBilling.CustomButton.Name = "";
+            this.txtBilling.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBilling.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBilling.CustomButton.TabIndex = 1;
+            this.txtBilling.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBilling.CustomButton.UseSelectable = true;
+            this.txtBilling.CustomButton.Visible = false;
+            this.txtBilling.Lines = new string[0];
+            this.txtBilling.Location = new System.Drawing.Point(441, 255);
+            this.txtBilling.MaxLength = 32767;
+            this.txtBilling.Name = "txtBilling";
+            this.txtBilling.PasswordChar = '\0';
+            this.txtBilling.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBilling.SelectedText = "";
+            this.txtBilling.SelectionLength = 0;
+            this.txtBilling.SelectionStart = 0;
+            this.txtBilling.ShortcutsEnabled = true;
+            this.txtBilling.Size = new System.Drawing.Size(160, 23);
+            this.txtBilling.TabIndex = 45;
+            this.txtBilling.UseSelectable = true;
+            this.txtBilling.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBilling.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblBilling
+            // 
+            this.lblBilling.AutoSize = true;
+            this.lblBilling.Location = new System.Drawing.Point(391, 255);
+            this.lblBilling.Name = "lblBilling";
+            this.lblBilling.Size = new System.Drawing.Size(44, 19);
+            this.lblBilling.TabIndex = 44;
+            this.lblBilling.Text = "Billing";
+            // 
+            // txtQuantity
+            // 
+            // 
+            // 
+            // 
+            this.txtQuantity.CustomButton.Image = null;
+            this.txtQuantity.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtQuantity.CustomButton.Name = "";
+            this.txtQuantity.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtQuantity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtQuantity.CustomButton.TabIndex = 1;
+            this.txtQuantity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtQuantity.CustomButton.UseSelectable = true;
+            this.txtQuantity.CustomButton.Visible = false;
+            this.txtQuantity.Lines = new string[0];
+            this.txtQuantity.Location = new System.Drawing.Point(441, 293);
+            this.txtQuantity.MaxLength = 32767;
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.PasswordChar = '\0';
+            this.txtQuantity.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtQuantity.SelectedText = "";
+            this.txtQuantity.SelectionLength = 0;
+            this.txtQuantity.SelectionStart = 0;
+            this.txtQuantity.ShortcutsEnabled = true;
+            this.txtQuantity.Size = new System.Drawing.Size(160, 23);
+            this.txtQuantity.TabIndex = 47;
+            this.txtQuantity.UseSelectable = true;
+            this.txtQuantity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtQuantity.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Location = new System.Drawing.Point(373, 293);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(62, 19);
+            this.lblQuantity.TabIndex = 46;
+            this.lblQuantity.Text = "Cantidad";
+            // 
+            // txtDescription
+            // 
+            // 
+            // 
+            // 
+            this.txtDescription.CustomButton.Image = null;
+            this.txtDescription.CustomButton.Location = new System.Drawing.Point(458, 1);
+            this.txtDescription.CustomButton.Name = "";
+            this.txtDescription.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDescription.CustomButton.TabIndex = 1;
+            this.txtDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDescription.CustomButton.UseSelectable = true;
+            this.txtDescription.CustomButton.Visible = false;
+            this.txtDescription.Lines = new string[0];
+            this.txtDescription.Location = new System.Drawing.Point(121, 361);
+            this.txtDescription.MaxLength = 32767;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PasswordChar = '\0';
+            this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDescription.SelectedText = "";
+            this.txtDescription.SelectionLength = 0;
+            this.txtDescription.SelectionStart = 0;
+            this.txtDescription.ShortcutsEnabled = true;
+            this.txtDescription.Size = new System.Drawing.Size(480, 23);
+            this.txtDescription.TabIndex = 49;
+            this.txtDescription.UseSelectable = true;
+            this.txtDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(20, 361);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(74, 19);
+            this.lblDescription.TabIndex = 48;
+            this.lblDescription.Text = "Description";
+            // 
+            // pctSale
+            // 
+            this.pctSale.Location = new System.Drawing.Point(391, 20);
+            this.pctSale.Name = "pctSale";
+            this.pctSale.Size = new System.Drawing.Size(210, 212);
+            this.pctSale.TabIndex = 50;
+            this.pctSale.TabStop = false;
+            // 
             // FrmSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,6 +592,7 @@
             this.pnlDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSale)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -502,7 +600,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel pnlDatos;
-        private MetroFramework.Controls.MetroComboBox cbmCiudad;
+        private MetroFramework.Controls.MetroComboBox cbmCity;
         private MetroFramework.Controls.MetroTextBox txtWeb;
         private MetroFramework.Controls.MetroLabel lblWeb;
         private MetroFramework.Controls.MetroTextBox txtEmail;
@@ -511,11 +609,9 @@
         private MetroFramework.Controls.MetroLabel lblPhone;
         private MetroFramework.Controls.MetroTextBox txtCodee;
         private MetroFramework.Controls.MetroLabel lblCodee;
-        private MetroFramework.Controls.MetroLabel lblCiudad;
-        private MetroFramework.Controls.MetroTextBox txtMarca;
-        private MetroFramework.Controls.MetroTextBox txtNombreEmpresa;
-        private MetroFramework.Controls.MetroLabel lblMarca;
-        private MetroFramework.Controls.MetroLabel lblEnterpriseName;
+        private MetroFramework.Controls.MetroLabel lblCity;
+        private MetroFramework.Controls.MetroTextBox txtBrand;
+        private MetroFramework.Controls.MetroLabel lblBrand;
         private MetroFramework.Controls.MetroTextBox txtAdress;
         private MetroFramework.Controls.MetroLabel lblAdress;
         private MetroFramework.Controls.MetroTextBox txtId;
@@ -543,5 +639,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn employeesDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource saleBindingSource;
         private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroTextBox txtBilling;
+        private MetroFramework.Controls.MetroLabel lblBilling;
+        private MetroFramework.Controls.MetroTextBox txtQuantity;
+        private MetroFramework.Controls.MetroLabel lblQuantity;
+        private System.Windows.Forms.PictureBox pctSale;
+        private MetroFramework.Controls.MetroTextBox txtDescription;
+        private MetroFramework.Controls.MetroLabel lblDescription;
     }
 }
