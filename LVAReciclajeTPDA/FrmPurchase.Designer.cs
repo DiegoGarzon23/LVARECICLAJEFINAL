@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
             this.btnEditar = new MetroFramework.Controls.MetroButton();
@@ -51,8 +51,6 @@
             this.txtBilling = new MetroFramework.Controls.MetroTextBox();
             this.lblBilling = new MetroFramework.Controls.MetroLabel();
             this.cbmCity = new MetroFramework.Controls.MetroComboBox();
-            this.txtWeb = new MetroFramework.Controls.MetroTextBox();
-            this.lblWeb = new MetroFramework.Controls.MetroLabel();
             this.txtContactEmail = new MetroFramework.Controls.MetroTextBox();
             this.lblContactEmail = new MetroFramework.Controls.MetroLabel();
             this.txtNumberPhone = new MetroFramework.Controls.MetroTextBox();
@@ -81,6 +79,8 @@
             this.purchaseDetailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtProduC = new MetroFramework.Controls.MetroTextBox();
+            this.lblPurchasePr = new MetroFramework.Controls.MetroLabel();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseBindingSource)).BeginInit();
@@ -148,6 +148,8 @@
             // 
             // pnlDatos
             // 
+            this.pnlDatos.Controls.Add(this.txtProduC);
+            this.pnlDatos.Controls.Add(this.lblPurchasePr);
             this.pnlDatos.Controls.Add(this.txtPrice);
             this.pnlDatos.Controls.Add(this.lblPrice);
             this.pnlDatos.Controls.Add(this.txtCompanyPhone);
@@ -161,8 +163,6 @@
             this.pnlDatos.Controls.Add(this.txtBilling);
             this.pnlDatos.Controls.Add(this.lblBilling);
             this.pnlDatos.Controls.Add(this.cbmCity);
-            this.pnlDatos.Controls.Add(this.txtWeb);
-            this.pnlDatos.Controls.Add(this.lblWeb);
             this.pnlDatos.Controls.Add(this.txtContactEmail);
             this.pnlDatos.Controls.Add(this.lblContactEmail);
             this.pnlDatos.Controls.Add(this.txtNumberPhone);
@@ -191,7 +191,7 @@
             // 
             // 
             this.txtPrice.CustomButton.Image = null;
-            this.txtPrice.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtPrice.CustomButton.Location = new System.Drawing.Point(220, 1);
             this.txtPrice.CustomButton.Name = "";
             this.txtPrice.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -199,6 +199,7 @@
             this.txtPrice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPrice.CustomButton.UseSelectable = true;
             this.txtPrice.CustomButton.Visible = false;
+            this.txtPrice.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Price", true));
             this.txtPrice.Lines = new string[0];
             this.txtPrice.Location = new System.Drawing.Point(115, 252);
             this.txtPrice.MaxLength = 32767;
@@ -209,7 +210,7 @@
             this.txtPrice.SelectionLength = 0;
             this.txtPrice.SelectionStart = 0;
             this.txtPrice.ShortcutsEnabled = true;
-            this.txtPrice.Size = new System.Drawing.Size(160, 23);
+            this.txtPrice.Size = new System.Drawing.Size(242, 23);
             this.txtPrice.TabIndex = 77;
             this.txtPrice.UseSelectable = true;
             this.txtPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -230,7 +231,7 @@
             // 
             // 
             this.txtCompanyPhone.CustomButton.Image = null;
-            this.txtCompanyPhone.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtCompanyPhone.CustomButton.Location = new System.Drawing.Point(202, 1);
             this.txtCompanyPhone.CustomButton.Name = "";
             this.txtCompanyPhone.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtCompanyPhone.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -238,6 +239,7 @@
             this.txtCompanyPhone.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCompanyPhone.CustomButton.UseSelectable = true;
             this.txtCompanyPhone.CustomButton.Visible = false;
+            this.txtCompanyPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "CompanyPhone", true));
             this.txtCompanyPhone.Lines = new string[0];
             this.txtCompanyPhone.Location = new System.Drawing.Point(538, 112);
             this.txtCompanyPhone.MaxLength = 32767;
@@ -248,7 +250,7 @@
             this.txtCompanyPhone.SelectionLength = 0;
             this.txtCompanyPhone.SelectionStart = 0;
             this.txtCompanyPhone.ShortcutsEnabled = true;
-            this.txtCompanyPhone.Size = new System.Drawing.Size(160, 23);
+            this.txtCompanyPhone.Size = new System.Drawing.Size(224, 23);
             this.txtCompanyPhone.TabIndex = 75;
             this.txtCompanyPhone.UseSelectable = true;
             this.txtCompanyPhone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -277,6 +279,7 @@
             this.txtCompany.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCompany.CustomButton.UseSelectable = true;
             this.txtCompany.CustomButton.Visible = false;
+            this.txtCompany.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Company", true));
             this.txtCompany.Lines = new string[0];
             this.txtCompany.Location = new System.Drawing.Point(197, 108);
             this.txtCompany.MaxLength = 32767;
@@ -308,7 +311,7 @@
             // 
             // 
             this.txtDescription.CustomButton.Image = null;
-            this.txtDescription.CustomButton.Location = new System.Drawing.Point(458, 1);
+            this.txtDescription.CustomButton.Location = new System.Drawing.Point(625, 1);
             this.txtDescription.CustomButton.Name = "";
             this.txtDescription.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -316,6 +319,7 @@
             this.txtDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtDescription.CustomButton.UseSelectable = true;
             this.txtDescription.CustomButton.Visible = false;
+            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Description", true));
             this.txtDescription.Lines = new string[0];
             this.txtDescription.Location = new System.Drawing.Point(115, 281);
             this.txtDescription.MaxLength = 32767;
@@ -326,7 +330,7 @@
             this.txtDescription.SelectionLength = 0;
             this.txtDescription.SelectionStart = 0;
             this.txtDescription.ShortcutsEnabled = true;
-            this.txtDescription.Size = new System.Drawing.Size(480, 23);
+            this.txtDescription.Size = new System.Drawing.Size(647, 23);
             this.txtDescription.TabIndex = 71;
             this.txtDescription.UseSelectable = true;
             this.txtDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -347,7 +351,7 @@
             // 
             // 
             this.txtQuantity.CustomButton.Image = null;
-            this.txtQuantity.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtQuantity.CustomButton.Location = new System.Drawing.Point(220, 1);
             this.txtQuantity.CustomButton.Name = "";
             this.txtQuantity.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtQuantity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -355,6 +359,7 @@
             this.txtQuantity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtQuantity.CustomButton.UseSelectable = true;
             this.txtQuantity.CustomButton.Visible = false;
+            this.txtQuantity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Quantity", true));
             this.txtQuantity.Lines = new string[0];
             this.txtQuantity.Location = new System.Drawing.Point(115, 223);
             this.txtQuantity.MaxLength = 32767;
@@ -365,7 +370,7 @@
             this.txtQuantity.SelectionLength = 0;
             this.txtQuantity.SelectionStart = 0;
             this.txtQuantity.ShortcutsEnabled = true;
-            this.txtQuantity.Size = new System.Drawing.Size(160, 23);
+            this.txtQuantity.Size = new System.Drawing.Size(242, 23);
             this.txtQuantity.TabIndex = 69;
             this.txtQuantity.UseSelectable = true;
             this.txtQuantity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -386,7 +391,7 @@
             // 
             // 
             this.txtBilling.CustomButton.Image = null;
-            this.txtBilling.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtBilling.CustomButton.Location = new System.Drawing.Point(202, 1);
             this.txtBilling.CustomButton.Name = "";
             this.txtBilling.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBilling.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -394,6 +399,7 @@
             this.txtBilling.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtBilling.CustomButton.UseSelectable = true;
             this.txtBilling.CustomButton.Visible = false;
+            this.txtBilling.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Billing", true));
             this.txtBilling.Lines = new string[0];
             this.txtBilling.Location = new System.Drawing.Point(538, 54);
             this.txtBilling.MaxLength = 32767;
@@ -404,7 +410,7 @@
             this.txtBilling.SelectionLength = 0;
             this.txtBilling.SelectionStart = 0;
             this.txtBilling.ShortcutsEnabled = true;
-            this.txtBilling.Size = new System.Drawing.Size(160, 23);
+            this.txtBilling.Size = new System.Drawing.Size(224, 23);
             this.txtBilling.TabIndex = 67;
             this.txtBilling.UseSelectable = true;
             this.txtBilling.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -421,6 +427,7 @@
             // 
             // cbmCity
             // 
+            this.cbmCity.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.purchaseBindingSource, "City", true));
             this.cbmCity.FormattingEnabled = true;
             this.cbmCity.ItemHeight = 23;
             this.cbmCity.Items.AddRange(new object[] {
@@ -447,52 +454,13 @@
             this.cbmCity.TabIndex = 65;
             this.cbmCity.UseSelectable = true;
             // 
-            // txtWeb
-            // 
-            // 
-            // 
-            // 
-            this.txtWeb.CustomButton.Image = null;
-            this.txtWeb.CustomButton.Location = new System.Drawing.Point(138, 1);
-            this.txtWeb.CustomButton.Name = "";
-            this.txtWeb.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtWeb.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtWeb.CustomButton.TabIndex = 1;
-            this.txtWeb.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtWeb.CustomButton.UseSelectable = true;
-            this.txtWeb.CustomButton.Visible = false;
-            this.txtWeb.Lines = new string[0];
-            this.txtWeb.Location = new System.Drawing.Point(538, 179);
-            this.txtWeb.MaxLength = 32767;
-            this.txtWeb.Name = "txtWeb";
-            this.txtWeb.PasswordChar = '\0';
-            this.txtWeb.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtWeb.SelectedText = "";
-            this.txtWeb.SelectionLength = 0;
-            this.txtWeb.SelectionStart = 0;
-            this.txtWeb.ShortcutsEnabled = true;
-            this.txtWeb.Size = new System.Drawing.Size(160, 23);
-            this.txtWeb.TabIndex = 64;
-            this.txtWeb.UseSelectable = true;
-            this.txtWeb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtWeb.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblWeb
-            // 
-            this.lblWeb.AutoSize = true;
-            this.lblWeb.Location = new System.Drawing.Point(496, 183);
-            this.lblWeb.Name = "lblWeb";
-            this.lblWeb.Size = new System.Drawing.Size(36, 19);
-            this.lblWeb.TabIndex = 63;
-            this.lblWeb.Text = "Web";
-            // 
             // txtContactEmail
             // 
             // 
             // 
             // 
             this.txtContactEmail.CustomButton.Image = null;
-            this.txtContactEmail.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtContactEmail.CustomButton.Location = new System.Drawing.Point(202, 1);
             this.txtContactEmail.CustomButton.Name = "";
             this.txtContactEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtContactEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -500,6 +468,7 @@
             this.txtContactEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtContactEmail.CustomButton.UseSelectable = true;
             this.txtContactEmail.CustomButton.Visible = false;
+            this.txtContactEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "ContactEmail", true));
             this.txtContactEmail.Lines = new string[0];
             this.txtContactEmail.Location = new System.Drawing.Point(538, 147);
             this.txtContactEmail.MaxLength = 32767;
@@ -510,7 +479,7 @@
             this.txtContactEmail.SelectionLength = 0;
             this.txtContactEmail.SelectionStart = 0;
             this.txtContactEmail.ShortcutsEnabled = true;
-            this.txtContactEmail.Size = new System.Drawing.Size(160, 23);
+            this.txtContactEmail.Size = new System.Drawing.Size(224, 23);
             this.txtContactEmail.TabIndex = 62;
             this.txtContactEmail.UseSelectable = true;
             this.txtContactEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -531,7 +500,7 @@
             // 
             // 
             this.txtNumberPhone.CustomButton.Image = null;
-            this.txtNumberPhone.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtNumberPhone.CustomButton.Location = new System.Drawing.Point(202, 1);
             this.txtNumberPhone.CustomButton.Name = "";
             this.txtNumberPhone.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtNumberPhone.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -539,6 +508,7 @@
             this.txtNumberPhone.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNumberPhone.CustomButton.UseSelectable = true;
             this.txtNumberPhone.CustomButton.Visible = false;
+            this.txtNumberPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "NumberPhone", true));
             this.txtNumberPhone.Lines = new string[0];
             this.txtNumberPhone.Location = new System.Drawing.Point(538, 83);
             this.txtNumberPhone.MaxLength = 32767;
@@ -549,7 +519,7 @@
             this.txtNumberPhone.SelectionLength = 0;
             this.txtNumberPhone.SelectionStart = 0;
             this.txtNumberPhone.ShortcutsEnabled = true;
-            this.txtNumberPhone.Size = new System.Drawing.Size(160, 23);
+            this.txtNumberPhone.Size = new System.Drawing.Size(224, 23);
             this.txtNumberPhone.TabIndex = 60;
             this.txtNumberPhone.UseSelectable = true;
             this.txtNumberPhone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -587,6 +557,7 @@
             this.txtFullNameBuyer.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtFullNameBuyer.CustomButton.UseSelectable = true;
             this.txtFullNameBuyer.CustomButton.Visible = false;
+            this.txtFullNameBuyer.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "FullNameBuyer", true));
             this.txtFullNameBuyer.Lines = new string[0];
             this.txtFullNameBuyer.Location = new System.Drawing.Point(197, 78);
             this.txtFullNameBuyer.MaxLength = 32767;
@@ -626,6 +597,7 @@
             this.txtAdress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAdress.CustomButton.UseSelectable = true;
             this.txtAdress.CustomButton.Visible = false;
+            this.txtAdress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Address", true));
             this.txtAdress.Lines = new string[0];
             this.txtAdress.Location = new System.Drawing.Point(197, 140);
             this.txtAdress.MaxLength = 32767;
@@ -665,6 +637,7 @@
             this.txtId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtId.CustomButton.UseSelectable = true;
             this.txtId.CustomButton.Visible = false;
+            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Id", true));
             this.txtId.Lines = new string[0];
             this.txtId.Location = new System.Drawing.Point(197, 49);
             this.txtId.MaxLength = 32767;
@@ -698,14 +671,14 @@
             this.grdDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -724,28 +697,28 @@
             this.purchaseDetailsDataGridViewTextBoxColumn,
             this.productsDataGridViewTextBoxColumn});
             this.grdDatos.DataSource = this.purchaseBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdDatos.EnableHeadersVisualStyles = false;
             this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grdDatos.Location = new System.Drawing.Point(819, 72);
             this.grdDatos.Name = "grdDatos";
             this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDatos.Size = new System.Drawing.Size(402, 338);
@@ -846,6 +819,46 @@
             // 
             this.purchaseBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Purchase);
             // 
+            // txtProduC
+            // 
+            // 
+            // 
+            // 
+            this.txtProduC.CustomButton.Image = null;
+            this.txtProduC.CustomButton.Location = new System.Drawing.Point(202, 1);
+            this.txtProduC.CustomButton.Name = "";
+            this.txtProduC.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtProduC.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtProduC.CustomButton.TabIndex = 1;
+            this.txtProduC.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtProduC.CustomButton.UseSelectable = true;
+            this.txtProduC.CustomButton.Visible = false;
+            this.txtProduC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "PurchaseProduct", true));
+            this.txtProduC.Lines = new string[0];
+            this.txtProduC.Location = new System.Drawing.Point(538, 176);
+            this.txtProduC.MaxLength = 32767;
+            this.txtProduC.Name = "txtProduC";
+            this.txtProduC.PasswordChar = '\0';
+            this.txtProduC.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtProduC.SelectedText = "";
+            this.txtProduC.SelectionLength = 0;
+            this.txtProduC.SelectionStart = 0;
+            this.txtProduC.ShortcutsEnabled = true;
+            this.txtProduC.Size = new System.Drawing.Size(224, 23);
+            this.txtProduC.TabIndex = 79;
+            this.txtProduC.UseSelectable = true;
+            this.txtProduC.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtProduC.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblPurchasePr
+            // 
+            this.lblPurchasePr.AutoSize = true;
+            this.lblPurchasePr.Location = new System.Drawing.Point(416, 180);
+            this.lblPurchasePr.Name = "lblPurchasePr";
+            this.lblPurchasePr.Size = new System.Drawing.Size(116, 19);
+            this.lblPurchasePr.TabIndex = 78;
+            this.lblPurchasePr.Text = "Producto Compra";
+            // 
             // FrmPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -884,8 +897,6 @@
         private MetroFramework.Controls.MetroTextBox txtBilling;
         private MetroFramework.Controls.MetroLabel lblBilling;
         private MetroFramework.Controls.MetroComboBox cbmCity;
-        private MetroFramework.Controls.MetroTextBox txtWeb;
-        private MetroFramework.Controls.MetroLabel lblWeb;
         private MetroFramework.Controls.MetroTextBox txtContactEmail;
         private MetroFramework.Controls.MetroLabel lblContactEmail;
         private MetroFramework.Controls.MetroTextBox txtNumberPhone;
@@ -920,5 +931,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDetailsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productsDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource purchaseBindingSource;
+        private MetroFramework.Controls.MetroTextBox txtProduC;
+        private MetroFramework.Controls.MetroLabel lblPurchasePr;
     }
 }
