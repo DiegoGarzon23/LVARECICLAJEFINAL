@@ -68,7 +68,7 @@ namespace LVAReciclajeTPDA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             pnlDatos.Enabled = true;
-            txtBrand.Focus();
+            txtName.Focus();
             Sale sale =
                 saleBindingSource.Current as Sale;
         }

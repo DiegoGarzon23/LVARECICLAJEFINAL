@@ -33,15 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saleDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.lblName = new MetroFramework.Controls.MetroLabel();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
             this.lblDescription = new MetroFramework.Controls.MetroLabel();
-            this.txtDatteTime = new MetroFramework.Controls.MetroDateTime();
-            this.lblDateF = new MetroFramework.Controls.MetroLabel();
-            this.txtDateT = new MetroFramework.Controls.MetroDateTime();
-            this.lblDateTimeT = new MetroFramework.Controls.MetroLabel();
             this.txtLd = new MetroFramework.Controls.MetroTextBox();
             this.lblId = new MetroFramework.Controls.MetroLabel();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
@@ -49,13 +49,13 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
-            this.saleDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblDateF = new MetroFramework.Controls.MetroLabel();
+            this.lblDateTimeT = new MetroFramework.Controls.MetroLabel();
+            this.dtFechaA = new MetroFramework.Controls.MetroDateTime();
+            this.dtFechaF = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
-            this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.saleDetailBindingSource)).BeginInit();
+            this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // grdDatos
@@ -108,15 +108,38 @@
             this.grdDatos.TabIndex = 0;
             this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
+            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            // 
+            // saleDataGridViewTextBoxColumn
+            // 
+            this.saleDataGridViewTextBoxColumn.DataPropertyName = "Sale";
+            this.saleDataGridViewTextBoxColumn.HeaderText = "Sale";
+            this.saleDataGridViewTextBoxColumn.Name = "saleDataGridViewTextBoxColumn";
+            // 
+            // saleDetailBindingSource
+            // 
+            this.saleDetailBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.SaleDetail);
+            // 
             // pnlDatos
             // 
+            this.pnlDatos.Controls.Add(this.dtFechaF);
+            this.pnlDatos.Controls.Add(this.dtFechaA);
             this.pnlDatos.Controls.Add(this.txtName);
             this.pnlDatos.Controls.Add(this.lblName);
             this.pnlDatos.Controls.Add(this.txtDescription);
             this.pnlDatos.Controls.Add(this.lblDescription);
-            this.pnlDatos.Controls.Add(this.txtDatteTime);
             this.pnlDatos.Controls.Add(this.lblDateF);
-            this.pnlDatos.Controls.Add(this.txtDateT);
             this.pnlDatos.Controls.Add(this.lblDateTimeT);
             this.pnlDatos.Controls.Add(this.txtLd);
             this.pnlDatos.Controls.Add(this.lblId);
@@ -210,42 +233,6 @@
             this.lblDescription.Size = new System.Drawing.Size(76, 19);
             this.lblDescription.TabIndex = 8;
             this.lblDescription.Text = "Descripción";
-            // 
-            // txtDatteTime
-            // 
-            this.txtDatteTime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.saleDetailBindingSource, "TerminationDate", true));
-            this.txtDatteTime.Location = new System.Drawing.Point(132, 112);
-            this.txtDatteTime.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtDatteTime.Name = "txtDatteTime";
-            this.txtDatteTime.Size = new System.Drawing.Size(306, 29);
-            this.txtDatteTime.TabIndex = 7;
-            // 
-            // lblDateF
-            // 
-            this.lblDateF.AutoSize = true;
-            this.lblDateF.Location = new System.Drawing.Point(12, 112);
-            this.lblDateF.Name = "lblDateF";
-            this.lblDateF.Size = new System.Drawing.Size(114, 19);
-            this.lblDateF.TabIndex = 6;
-            this.lblDateF.Text = "Fecha Finalización";
-            // 
-            // txtDateT
-            // 
-            this.txtDateT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.saleDetailBindingSource, "AssingmentDate", true));
-            this.txtDateT.Location = new System.Drawing.Point(132, 70);
-            this.txtDateT.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtDateT.Name = "txtDateT";
-            this.txtDateT.Size = new System.Drawing.Size(306, 29);
-            this.txtDateT.TabIndex = 5;
-            // 
-            // lblDateTimeT
-            // 
-            this.lblDateTimeT.AutoSize = true;
-            this.lblDateTimeT.Location = new System.Drawing.Point(12, 70);
-            this.lblDateTimeT.Name = "lblDateTimeT";
-            this.lblDateTimeT.Size = new System.Drawing.Size(110, 19);
-            this.lblDateTimeT.TabIndex = 4;
-            this.lblDateTimeT.Text = "Fecha Asignación";
             // 
             // txtLd
             // 
@@ -347,28 +334,41 @@
             this.btnGuardar.UseSelectable = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // saleDetailBindingSource
+            // lblDateF
             // 
-            this.saleDetailBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.SaleDetail);
+            this.lblDateF.AutoSize = true;
+            this.lblDateF.Location = new System.Drawing.Point(12, 112);
+            this.lblDateF.Name = "lblDateF";
+            this.lblDateF.Size = new System.Drawing.Size(114, 19);
+            this.lblDateF.TabIndex = 6;
+            this.lblDateF.Text = "Fecha Finalización";
             // 
-            // idDataGridViewTextBoxColumn
+            // lblDateTimeT
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lblDateTimeT.AutoSize = true;
+            this.lblDateTimeT.Location = new System.Drawing.Point(12, 70);
+            this.lblDateTimeT.Name = "lblDateTimeT";
+            this.lblDateTimeT.Size = new System.Drawing.Size(110, 19);
+            this.lblDateTimeT.TabIndex = 4;
+            this.lblDateTimeT.Text = "Fecha Asignación";
             // 
-            // productDataGridViewTextBoxColumn
+            // dtFechaA
             // 
-            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
-            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
-            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            this.dtFechaA.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.saleDetailBindingSource, "AssingmentDate", true));
+            this.dtFechaA.Location = new System.Drawing.Point(132, 70);
+            this.dtFechaA.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFechaA.Name = "dtFechaA";
+            this.dtFechaA.Size = new System.Drawing.Size(306, 29);
+            this.dtFechaA.TabIndex = 12;
             // 
-            // saleDataGridViewTextBoxColumn
+            // dtFechaF
             // 
-            this.saleDataGridViewTextBoxColumn.DataPropertyName = "Sale";
-            this.saleDataGridViewTextBoxColumn.HeaderText = "Sale";
-            this.saleDataGridViewTextBoxColumn.Name = "saleDataGridViewTextBoxColumn";
+            this.dtFechaF.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.saleDetailBindingSource, "TerminationDate", true));
+            this.dtFechaF.Location = new System.Drawing.Point(132, 105);
+            this.dtFechaF.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFechaF.Name = "dtFechaF";
+            this.dtFechaF.Size = new System.Drawing.Size(306, 29);
+            this.dtFechaF.TabIndex = 13;
             // 
             // FrmSaleDetail
             // 
@@ -386,9 +386,9 @@
             this.Text = "Detalle Venta";
             this.Load += new System.EventHandler(this.FrmSaleDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saleDetailBindingSource)).EndInit();
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.saleDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,12 +408,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn saleDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource saleDetailBindingSource;
         private MetroFramework.Controls.MetroPanel pnlDatos;
-        private MetroFramework.Controls.MetroLabel lblDateTimeT;
         private MetroFramework.Controls.MetroTextBox txtLd;
         private MetroFramework.Controls.MetroLabel lblId;
-        private MetroFramework.Controls.MetroDateTime txtDatteTime;
-        private MetroFramework.Controls.MetroLabel lblDateF;
-        private MetroFramework.Controls.MetroDateTime txtDateT;
         private MetroFramework.Controls.MetroTextBox txtDescription;
         private MetroFramework.Controls.MetroLabel lblDescription;
         private MetroFramework.Controls.MetroButton btnSalir;
@@ -423,5 +419,9 @@
         private MetroFramework.Controls.MetroButton btnGuardar;
         private MetroFramework.Controls.MetroTextBox txtName;
         private MetroFramework.Controls.MetroLabel lblName;
+        private MetroFramework.Controls.MetroDateTime dtFechaF;
+        private MetroFramework.Controls.MetroDateTime dtFechaA;
+        private MetroFramework.Controls.MetroLabel lblDateF;
+        private MetroFramework.Controls.MetroLabel lblDateTimeT;
     }
 }

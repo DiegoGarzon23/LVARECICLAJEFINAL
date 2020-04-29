@@ -16,7 +16,7 @@ namespace LVAReciclajeTPDA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSaleDetail());
+            Application.Run(new frmEmpleado());
         }
     }
 }
