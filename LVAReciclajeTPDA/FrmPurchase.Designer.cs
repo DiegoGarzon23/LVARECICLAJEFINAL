@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +42,8 @@
             this.lblPrice = new MetroFramework.Controls.MetroLabel();
             this.txtCompanyPhone = new MetroFramework.Controls.MetroTextBox();
             this.lblCompanyPhone = new MetroFramework.Controls.MetroLabel();
+            this.txtCompany = new MetroFramework.Controls.MetroTextBox();
+            this.lblCompany = new MetroFramework.Controls.MetroLabel();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
             this.lblDescription = new MetroFramework.Controls.MetroLabel();
             this.txtQuantity = new MetroFramework.Controls.MetroTextBox();
@@ -50,6 +51,8 @@
             this.txtBilling = new MetroFramework.Controls.MetroTextBox();
             this.lblBilling = new MetroFramework.Controls.MetroLabel();
             this.cbmCity = new MetroFramework.Controls.MetroComboBox();
+            this.txtWeb = new MetroFramework.Controls.MetroTextBox();
+            this.lblWeb = new MetroFramework.Controls.MetroLabel();
             this.txtContactEmail = new MetroFramework.Controls.MetroTextBox();
             this.lblContactEmail = new MetroFramework.Controls.MetroLabel();
             this.txtNumberPhone = new MetroFramework.Controls.MetroTextBox();
@@ -61,30 +64,9 @@
             this.lblAdress = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
             this.lblId = new MetroFramework.Controls.MetroLabel();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.purchaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullNameBuyerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseProductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.billingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseDetailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtPurchasePro = new MetroFramework.Controls.MetroTextBox();
-            this.lblPurchaseP = new MetroFramework.Controls.MetroLabel();
-            this.txtCompany = new MetroFramework.Controls.MetroTextBox();
-            this.lblCompany = new MetroFramework.Controls.MetroLabel();
+            this.grdDatos = new MetroFramework.Controls.MetroGrid();
             this.pnlDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -97,6 +79,7 @@
             this.btnSalir.TabIndex = 60;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseSelectable = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
@@ -108,6 +91,7 @@
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseSelectable = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnBuscar
             // 
@@ -119,6 +103,7 @@
             this.btnBuscar.TabIndex = 58;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseSelectable = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEditar
             // 
@@ -130,6 +115,7 @@
             this.btnEditar.TabIndex = 57;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseSelectable = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -141,6 +127,7 @@
             this.btnAgregar.TabIndex = 56;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseSelectable = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnGuardar
             // 
@@ -156,14 +143,12 @@
             // 
             // pnlDatos
             // 
-            this.pnlDatos.Controls.Add(this.txtCompany);
-            this.pnlDatos.Controls.Add(this.lblCompany);
-            this.pnlDatos.Controls.Add(this.txtPurchasePro);
-            this.pnlDatos.Controls.Add(this.lblPurchaseP);
-            this.pnlDatos.Controls.Add(this.txtCompanyPhone);
-            this.pnlDatos.Controls.Add(this.lblCompanyPhone);
             this.pnlDatos.Controls.Add(this.txtPrice);
             this.pnlDatos.Controls.Add(this.lblPrice);
+            this.pnlDatos.Controls.Add(this.txtCompanyPhone);
+            this.pnlDatos.Controls.Add(this.lblCompanyPhone);
+            this.pnlDatos.Controls.Add(this.txtCompany);
+            this.pnlDatos.Controls.Add(this.lblCompany);
             this.pnlDatos.Controls.Add(this.txtDescription);
             this.pnlDatos.Controls.Add(this.lblDescription);
             this.pnlDatos.Controls.Add(this.txtQuantity);
@@ -171,6 +156,8 @@
             this.pnlDatos.Controls.Add(this.txtBilling);
             this.pnlDatos.Controls.Add(this.lblBilling);
             this.pnlDatos.Controls.Add(this.cbmCity);
+            this.pnlDatos.Controls.Add(this.txtWeb);
+            this.pnlDatos.Controls.Add(this.lblWeb);
             this.pnlDatos.Controls.Add(this.txtContactEmail);
             this.pnlDatos.Controls.Add(this.lblContactEmail);
             this.pnlDatos.Controls.Add(this.txtNumberPhone);
@@ -187,7 +174,7 @@
             this.pnlDatos.HorizontalScrollbarSize = 10;
             this.pnlDatos.Location = new System.Drawing.Point(23, 72);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(716, 338);
+            this.pnlDatos.Size = new System.Drawing.Size(790, 338);
             this.pnlDatos.TabIndex = 61;
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
@@ -208,9 +195,8 @@
             this.txtPrice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPrice.CustomButton.UseSelectable = true;
             this.txtPrice.CustomButton.Visible = false;
-            this.txtPrice.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Price", true));
             this.txtPrice.Lines = new string[0];
-            this.txtPrice.Location = new System.Drawing.Point(538, 252);
+            this.txtPrice.Location = new System.Drawing.Point(115, 252);
             this.txtPrice.MaxLength = 32767;
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
@@ -228,7 +214,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(462, 256);
+            this.lblPrice.Location = new System.Drawing.Point(28, 252);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(46, 19);
             this.lblPrice.TabIndex = 76;
@@ -248,9 +234,8 @@
             this.txtCompanyPhone.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCompanyPhone.CustomButton.UseSelectable = true;
             this.txtCompanyPhone.CustomButton.Visible = false;
-            this.txtCompanyPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "CompanyPhone", true));
             this.txtCompanyPhone.Lines = new string[0];
-            this.txtCompanyPhone.Location = new System.Drawing.Point(538, 141);
+            this.txtCompanyPhone.Location = new System.Drawing.Point(538, 112);
             this.txtCompanyPhone.MaxLength = 32767;
             this.txtCompanyPhone.Name = "txtCompanyPhone";
             this.txtCompanyPhone.PasswordChar = '\0';
@@ -268,11 +253,50 @@
             // lblCompanyPhone
             // 
             this.lblCompanyPhone.AutoSize = true;
-            this.lblCompanyPhone.Location = new System.Drawing.Point(379, 137);
+            this.lblCompanyPhone.Location = new System.Drawing.Point(379, 112);
             this.lblCompanyPhone.Name = "lblCompanyPhone";
             this.lblCompanyPhone.Size = new System.Drawing.Size(153, 19);
             this.lblCompanyPhone.TabIndex = 74;
             this.lblCompanyPhone.Text = "Teléfono de la compañia";
+            // 
+            // txtCompany
+            // 
+            // 
+            // 
+            // 
+            this.txtCompany.CustomButton.Image = null;
+            this.txtCompany.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtCompany.CustomButton.Name = "";
+            this.txtCompany.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCompany.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCompany.CustomButton.TabIndex = 1;
+            this.txtCompany.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCompany.CustomButton.UseSelectable = true;
+            this.txtCompany.CustomButton.Visible = false;
+            this.txtCompany.Lines = new string[0];
+            this.txtCompany.Location = new System.Drawing.Point(197, 108);
+            this.txtCompany.MaxLength = 32767;
+            this.txtCompany.Name = "txtCompany";
+            this.txtCompany.PasswordChar = '\0';
+            this.txtCompany.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCompany.SelectedText = "";
+            this.txtCompany.SelectionLength = 0;
+            this.txtCompany.SelectionStart = 0;
+            this.txtCompany.ShortcutsEnabled = true;
+            this.txtCompany.Size = new System.Drawing.Size(160, 23);
+            this.txtCompany.TabIndex = 73;
+            this.txtCompany.UseSelectable = true;
+            this.txtCompany.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCompany.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblCompany
+            // 
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.Location = new System.Drawing.Point(12, 111);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(154, 19);
+            this.lblCompany.TabIndex = 72;
+            this.lblCompany.Text = "Nombre de la compañia";
             // 
             // txtDescription
             // 
@@ -288,7 +312,6 @@
             this.txtDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtDescription.CustomButton.UseSelectable = true;
             this.txtDescription.CustomButton.Visible = false;
-            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Description", true));
             this.txtDescription.Lines = new string[0];
             this.txtDescription.Location = new System.Drawing.Point(115, 281);
             this.txtDescription.MaxLength = 32767;
@@ -328,9 +351,8 @@
             this.txtQuantity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtQuantity.CustomButton.UseSelectable = true;
             this.txtQuantity.CustomButton.Visible = false;
-            this.txtQuantity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Quantity", true));
             this.txtQuantity.Lines = new string[0];
-            this.txtQuantity.Location = new System.Drawing.Point(538, 219);
+            this.txtQuantity.Location = new System.Drawing.Point(115, 223);
             this.txtQuantity.MaxLength = 32767;
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
@@ -348,7 +370,7 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(450, 223);
+            this.lblQuantity.Location = new System.Drawing.Point(28, 223);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(62, 19);
             this.lblQuantity.TabIndex = 68;
@@ -368,7 +390,6 @@
             this.txtBilling.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtBilling.CustomButton.UseSelectable = true;
             this.txtBilling.CustomButton.Visible = false;
-            this.txtBilling.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Billing", true));
             this.txtBilling.Lines = new string[0];
             this.txtBilling.Location = new System.Drawing.Point(538, 54);
             this.txtBilling.MaxLength = 32767;
@@ -396,7 +417,6 @@
             // 
             // cbmCity
             // 
-            this.cbmCity.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.purchaseBindingSource, "City", true));
             this.cbmCity.FormattingEnabled = true;
             this.cbmCity.ItemHeight = 23;
             this.cbmCity.Items.AddRange(new object[] {
@@ -417,11 +437,50 @@
             "Teziutlan",
             "Xicotepec",
             "Zacatlán"});
-            this.cbmCity.Location = new System.Drawing.Point(538, 179);
+            this.cbmCity.Location = new System.Drawing.Point(197, 169);
             this.cbmCity.Name = "cbmCity";
             this.cbmCity.Size = new System.Drawing.Size(160, 29);
             this.cbmCity.TabIndex = 65;
             this.cbmCity.UseSelectable = true;
+            // 
+            // txtWeb
+            // 
+            // 
+            // 
+            // 
+            this.txtWeb.CustomButton.Image = null;
+            this.txtWeb.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtWeb.CustomButton.Name = "";
+            this.txtWeb.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtWeb.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtWeb.CustomButton.TabIndex = 1;
+            this.txtWeb.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtWeb.CustomButton.UseSelectable = true;
+            this.txtWeb.CustomButton.Visible = false;
+            this.txtWeb.Lines = new string[0];
+            this.txtWeb.Location = new System.Drawing.Point(538, 179);
+            this.txtWeb.MaxLength = 32767;
+            this.txtWeb.Name = "txtWeb";
+            this.txtWeb.PasswordChar = '\0';
+            this.txtWeb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtWeb.SelectedText = "";
+            this.txtWeb.SelectionLength = 0;
+            this.txtWeb.SelectionStart = 0;
+            this.txtWeb.ShortcutsEnabled = true;
+            this.txtWeb.Size = new System.Drawing.Size(160, 23);
+            this.txtWeb.TabIndex = 64;
+            this.txtWeb.UseSelectable = true;
+            this.txtWeb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtWeb.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblWeb
+            // 
+            this.lblWeb.AutoSize = true;
+            this.lblWeb.Location = new System.Drawing.Point(496, 183);
+            this.lblWeb.Name = "lblWeb";
+            this.lblWeb.Size = new System.Drawing.Size(36, 19);
+            this.lblWeb.TabIndex = 63;
+            this.lblWeb.Text = "Web";
             // 
             // txtContactEmail
             // 
@@ -437,9 +496,8 @@
             this.txtContactEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtContactEmail.CustomButton.UseSelectable = true;
             this.txtContactEmail.CustomButton.Visible = false;
-            this.txtContactEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "ContactEmail", true));
             this.txtContactEmail.Lines = new string[0];
-            this.txtContactEmail.Location = new System.Drawing.Point(197, 147);
+            this.txtContactEmail.Location = new System.Drawing.Point(538, 147);
             this.txtContactEmail.MaxLength = 32767;
             this.txtContactEmail.Name = "txtContactEmail";
             this.txtContactEmail.PasswordChar = '\0';
@@ -457,7 +515,7 @@
             // lblContactEmail
             // 
             this.lblContactEmail.AutoSize = true;
-            this.lblContactEmail.Location = new System.Drawing.Point(103, 151);
+            this.lblContactEmail.Location = new System.Drawing.Point(488, 151);
             this.lblContactEmail.Name = "lblContactEmail";
             this.lblContactEmail.Size = new System.Drawing.Size(41, 19);
             this.lblContactEmail.TabIndex = 61;
@@ -477,9 +535,8 @@
             this.txtNumberPhone.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNumberPhone.CustomButton.UseSelectable = true;
             this.txtNumberPhone.CustomButton.Visible = false;
-            this.txtNumberPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "NumberPhone", true));
             this.txtNumberPhone.Lines = new string[0];
-            this.txtNumberPhone.Location = new System.Drawing.Point(197, 112);
+            this.txtNumberPhone.Location = new System.Drawing.Point(538, 83);
             this.txtNumberPhone.MaxLength = 32767;
             this.txtNumberPhone.Name = "txtNumberPhone";
             this.txtNumberPhone.PasswordChar = '\0';
@@ -497,7 +554,7 @@
             // lblNumberPhone
             // 
             this.lblNumberPhone.AutoSize = true;
-            this.lblNumberPhone.Location = new System.Drawing.Point(103, 116);
+            this.lblNumberPhone.Location = new System.Drawing.Point(474, 87);
             this.lblNumberPhone.Name = "lblNumberPhone";
             this.lblNumberPhone.Size = new System.Drawing.Size(58, 19);
             this.lblNumberPhone.TabIndex = 59;
@@ -506,7 +563,7 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(450, 189);
+            this.lblCity.Location = new System.Drawing.Point(115, 179);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(51, 19);
             this.lblCity.TabIndex = 56;
@@ -526,7 +583,6 @@
             this.txtFullNameBuyer.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtFullNameBuyer.CustomButton.UseSelectable = true;
             this.txtFullNameBuyer.CustomButton.Visible = false;
-            this.txtFullNameBuyer.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "FullNameBuyer", true));
             this.txtFullNameBuyer.Lines = new string[0];
             this.txtFullNameBuyer.Location = new System.Drawing.Point(197, 78);
             this.txtFullNameBuyer.MaxLength = 32767;
@@ -566,9 +622,8 @@
             this.txtAdress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAdress.CustomButton.UseSelectable = true;
             this.txtAdress.CustomButton.Visible = false;
-            this.txtAdress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Address", true));
             this.txtAdress.Lines = new string[0];
-            this.txtAdress.Location = new System.Drawing.Point(538, 112);
+            this.txtAdress.Location = new System.Drawing.Point(197, 140);
             this.txtAdress.MaxLength = 32767;
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.PasswordChar = '\0';
@@ -586,7 +641,7 @@
             // lblAdress
             // 
             this.lblAdress.AutoSize = true;
-            this.lblAdress.Location = new System.Drawing.Point(462, 116);
+            this.lblAdress.Location = new System.Drawing.Point(103, 147);
             this.lblAdress.Name = "lblAdress";
             this.lblAdress.Size = new System.Drawing.Size(63, 19);
             this.lblAdress.TabIndex = 54;
@@ -606,7 +661,6 @@
             this.txtId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtId.CustomButton.UseSelectable = true;
             this.txtId.CustomButton.Visible = false;
-            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Id", true));
             this.txtId.Lines = new string[0];
             this.txtId.Location = new System.Drawing.Point(197, 49);
             this.txtId.MaxLength = 32767;
@@ -632,14 +686,13 @@
             this.lblId.TabIndex = 50;
             this.lblId.Text = "Id";
             // 
-            // metroGrid1
+            // grdDatos
             // 
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.AutoGenerateColumns = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grdDatos.AllowUserToResizeRows = false;
+            this.grdDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grdDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.grdDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -647,25 +700,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.fullNameBuyerDataGridViewTextBoxColumn,
-            this.numberPhoneDataGridViewTextBoxColumn,
-            this.contactEmailDataGridViewTextBoxColumn,
-            this.purchaseProductDataGridViewTextBoxColumn,
-            this.billingDataGridViewTextBoxColumn,
-            this.companyDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.companyPhoneDataGridViewTextBoxColumn,
-            this.cityDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.purchaseDetailsDataGridViewTextBoxColumn,
-            this.productsDataGridViewTextBoxColumn});
-            this.metroGrid1.DataSource = this.purchaseBindingSource;
+            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -673,13 +709,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(745, 72);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdDatos.EnableHeadersVisualStyles = false;
+            this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grdDatos.Location = new System.Drawing.Point(872, 85);
+            this.grdDatos.Name = "grdDatos";
+            this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -687,193 +723,19 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(279, 202);
-            this.metroGrid1.TabIndex = 62;
-            // 
-            // purchaseBindingSource
-            // 
-            this.purchaseBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Purchase);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fullNameBuyerDataGridViewTextBoxColumn
-            // 
-            this.fullNameBuyerDataGridViewTextBoxColumn.DataPropertyName = "FullNameBuyer";
-            this.fullNameBuyerDataGridViewTextBoxColumn.HeaderText = "FullNameBuyer";
-            this.fullNameBuyerDataGridViewTextBoxColumn.Name = "fullNameBuyerDataGridViewTextBoxColumn";
-            // 
-            // numberPhoneDataGridViewTextBoxColumn
-            // 
-            this.numberPhoneDataGridViewTextBoxColumn.DataPropertyName = "NumberPhone";
-            this.numberPhoneDataGridViewTextBoxColumn.HeaderText = "NumberPhone";
-            this.numberPhoneDataGridViewTextBoxColumn.Name = "numberPhoneDataGridViewTextBoxColumn";
-            // 
-            // contactEmailDataGridViewTextBoxColumn
-            // 
-            this.contactEmailDataGridViewTextBoxColumn.DataPropertyName = "ContactEmail";
-            this.contactEmailDataGridViewTextBoxColumn.HeaderText = "ContactEmail";
-            this.contactEmailDataGridViewTextBoxColumn.Name = "contactEmailDataGridViewTextBoxColumn";
-            // 
-            // purchaseProductDataGridViewTextBoxColumn
-            // 
-            this.purchaseProductDataGridViewTextBoxColumn.DataPropertyName = "PurchaseProduct";
-            this.purchaseProductDataGridViewTextBoxColumn.HeaderText = "PurchaseProduct";
-            this.purchaseProductDataGridViewTextBoxColumn.Name = "purchaseProductDataGridViewTextBoxColumn";
-            // 
-            // billingDataGridViewTextBoxColumn
-            // 
-            this.billingDataGridViewTextBoxColumn.DataPropertyName = "Billing";
-            this.billingDataGridViewTextBoxColumn.HeaderText = "Billing";
-            this.billingDataGridViewTextBoxColumn.Name = "billingDataGridViewTextBoxColumn";
-            // 
-            // companyDataGridViewTextBoxColumn
-            // 
-            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn.HeaderText = "Company";
-            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // companyPhoneDataGridViewTextBoxColumn
-            // 
-            this.companyPhoneDataGridViewTextBoxColumn.DataPropertyName = "CompanyPhone";
-            this.companyPhoneDataGridViewTextBoxColumn.HeaderText = "CompanyPhone";
-            this.companyPhoneDataGridViewTextBoxColumn.Name = "companyPhoneDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            // 
-            // purchaseDetailsDataGridViewTextBoxColumn
-            // 
-            this.purchaseDetailsDataGridViewTextBoxColumn.DataPropertyName = "PurchaseDetails";
-            this.purchaseDetailsDataGridViewTextBoxColumn.HeaderText = "PurchaseDetails";
-            this.purchaseDetailsDataGridViewTextBoxColumn.Name = "purchaseDetailsDataGridViewTextBoxColumn";
-            // 
-            // productsDataGridViewTextBoxColumn
-            // 
-            this.productsDataGridViewTextBoxColumn.DataPropertyName = "Products";
-            this.productsDataGridViewTextBoxColumn.HeaderText = "Products";
-            this.productsDataGridViewTextBoxColumn.Name = "productsDataGridViewTextBoxColumn";
-            // 
-            // txtPurchasePro
-            // 
-            // 
-            // 
-            // 
-            this.txtPurchasePro.CustomButton.Image = null;
-            this.txtPurchasePro.CustomButton.Location = new System.Drawing.Point(138, 1);
-            this.txtPurchasePro.CustomButton.Name = "";
-            this.txtPurchasePro.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtPurchasePro.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPurchasePro.CustomButton.TabIndex = 1;
-            this.txtPurchasePro.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPurchasePro.CustomButton.UseSelectable = true;
-            this.txtPurchasePro.CustomButton.Visible = false;
-            this.txtPurchasePro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "PurchaseProduct", true));
-            this.txtPurchasePro.Lines = new string[0];
-            this.txtPurchasePro.Location = new System.Drawing.Point(197, 179);
-            this.txtPurchasePro.MaxLength = 32767;
-            this.txtPurchasePro.Name = "txtPurchasePro";
-            this.txtPurchasePro.PasswordChar = '\0';
-            this.txtPurchasePro.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtPurchasePro.SelectedText = "";
-            this.txtPurchasePro.SelectionLength = 0;
-            this.txtPurchasePro.SelectionStart = 0;
-            this.txtPurchasePro.ShortcutsEnabled = true;
-            this.txtPurchasePro.Size = new System.Drawing.Size(160, 23);
-            this.txtPurchasePro.TabIndex = 79;
-            this.txtPurchasePro.UseSelectable = true;
-            this.txtPurchasePro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtPurchasePro.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblPurchaseP
-            // 
-            this.lblPurchaseP.AutoSize = true;
-            this.lblPurchaseP.Location = new System.Drawing.Point(50, 183);
-            this.lblPurchaseP.Name = "lblPurchaseP";
-            this.lblPurchaseP.Size = new System.Drawing.Size(116, 19);
-            this.lblPurchaseP.TabIndex = 78;
-            this.lblPurchaseP.Text = "Producto Compra";
-            // 
-            // txtCompany
-            // 
-            // 
-            // 
-            // 
-            this.txtCompany.CustomButton.Image = null;
-            this.txtCompany.CustomButton.Location = new System.Drawing.Point(138, 1);
-            this.txtCompany.CustomButton.Name = "";
-            this.txtCompany.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtCompany.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtCompany.CustomButton.TabIndex = 1;
-            this.txtCompany.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCompany.CustomButton.UseSelectable = true;
-            this.txtCompany.CustomButton.Visible = false;
-            this.txtCompany.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseBindingSource, "Company", true));
-            this.txtCompany.Lines = new string[0];
-            this.txtCompany.Location = new System.Drawing.Point(538, 83);
-            this.txtCompany.MaxLength = 32767;
-            this.txtCompany.Name = "txtCompany";
-            this.txtCompany.PasswordChar = '\0';
-            this.txtCompany.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCompany.SelectedText = "";
-            this.txtCompany.SelectionLength = 0;
-            this.txtCompany.SelectionStart = 0;
-            this.txtCompany.ShortcutsEnabled = true;
-            this.txtCompany.Size = new System.Drawing.Size(160, 23);
-            this.txtCompany.TabIndex = 81;
-            this.txtCompany.UseSelectable = true;
-            this.txtCompany.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCompany.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblCompany
-            // 
-            this.lblCompany.AutoSize = true;
-            this.lblCompany.Location = new System.Drawing.Point(462, 87);
-            this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(70, 19);
-            this.lblCompany.TabIndex = 80;
-            this.lblCompany.Text = "Compañia";
+            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdDatos.Size = new System.Drawing.Size(240, 150);
+            this.grdDatos.TabIndex = 62;
+            this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
             // 
             // FrmPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 532);
-            this.Controls.Add(this.metroGrid1);
+            this.ClientSize = new System.Drawing.Size(1244, 567);
+            this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -886,8 +748,7 @@
             this.Load += new System.EventHandler(this.FrmPurchase_Load);
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -908,6 +769,8 @@
         private MetroFramework.Controls.MetroTextBox txtBilling;
         private MetroFramework.Controls.MetroLabel lblBilling;
         private MetroFramework.Controls.MetroComboBox cbmCity;
+        private MetroFramework.Controls.MetroTextBox txtWeb;
+        private MetroFramework.Controls.MetroLabel lblWeb;
         private MetroFramework.Controls.MetroTextBox txtContactEmail;
         private MetroFramework.Controls.MetroLabel lblContactEmail;
         private MetroFramework.Controls.MetroTextBox txtNumberPhone;
@@ -919,30 +782,12 @@
         private MetroFramework.Controls.MetroLabel lblAdress;
         private MetroFramework.Controls.MetroTextBox txtId;
         private MetroFramework.Controls.MetroLabel lblId;
+        private MetroFramework.Controls.MetroTextBox txtCompany;
+        private MetroFramework.Controls.MetroLabel lblCompany;
         private MetroFramework.Controls.MetroTextBox txtCompanyPhone;
         private MetroFramework.Controls.MetroLabel lblCompanyPhone;
         private MetroFramework.Controls.MetroTextBox txtPrice;
         private MetroFramework.Controls.MetroLabel lblPrice;
-        private System.Windows.Forms.BindingSource purchaseBindingSource;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameBuyerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberPhoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contactEmailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn purchaseProductDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn billingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyPhoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDetailsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productsDataGridViewTextBoxColumn;
-        private MetroFramework.Controls.MetroTextBox txtPurchasePro;
-        private MetroFramework.Controls.MetroLabel lblPurchaseP;
-        private MetroFramework.Controls.MetroTextBox txtCompany;
-        private MetroFramework.Controls.MetroLabel lblCompany;
+        private MetroFramework.Controls.MetroGrid grdDatos;
     }
 }
