@@ -21,5 +21,10 @@ namespace LVAReciclajeTPDA
         {
 
         }
+
+        private void pnlDatos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
