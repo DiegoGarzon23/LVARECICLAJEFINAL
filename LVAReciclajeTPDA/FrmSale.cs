@@ -68,7 +68,7 @@ namespace LVAReciclajeTPDA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             pnlDatos.Enabled = true;
-            txtBrand.Focus();
+            txtCompany.Focus();
             Sale sale =
                 saleBindingSource.Current as Sale;
         }
@@ -110,6 +110,11 @@ namespace LVAReciclajeTPDA
             pnlDatos.Enabled = false;
             saleBindingSource.ResetBindings(false);
             FrmSale_Load(sender, e);
+        }
+
+        private void pnlDatos_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
