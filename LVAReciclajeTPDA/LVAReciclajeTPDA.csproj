@@ -214,6 +214,14 @@
     <Compile Include="Migrations\202004251549367_prueba2.designer.cs">
       <DependentUpon>202004251549367_prueba2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004291825344_prueba33.cs" />
+    <Compile Include="Migrations\202004291825344_prueba33.designer.cs">
+      <DependentUpon>202004291825344_prueba33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004291854471_Prueba4.cs" />
+    <Compile Include="Migrations\202004291854471_Prueba4.designer.cs">
+      <DependentUpon>202004291854471_Prueba4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -255,6 +263,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004251549367_prueba2.resx">
       <DependentUpon>202004251549367_prueba2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004291825344_prueba33.resx">
+      <DependentUpon>202004291825344_prueba33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004291854471_Prueba4.resx">
+      <DependentUpon>202004291854471_Prueba4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
