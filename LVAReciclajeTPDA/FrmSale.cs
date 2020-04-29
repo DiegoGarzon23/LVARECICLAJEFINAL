@@ -68,7 +68,7 @@ namespace LVAReciclajeTPDA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             pnlDatos.Enabled = true;
-            txtCompany.Focus();
+            txtFullNameSeller.Focus();
             Sale sale =
                 saleBindingSource.Current as Sale;
         }
@@ -112,7 +112,10 @@ namespace LVAReciclajeTPDA
             FrmSale_Load(sender, e);
         }
 
-       
+        private void grdDatos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            Sale sale = saleBindingSource.Current as Sale;
+        }
     }
 }
 

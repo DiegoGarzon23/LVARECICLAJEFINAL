@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.txtTeC = new MetroFramework.Controls.MetroTextBox();
+            this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblCompatyPo = new MetroFramework.Controls.MetroLabel();
+            this.txtBilling = new MetroFramework.Controls.MetroTextBox();
+            this.lblBilling = new MetroFramework.Controls.MetroLabel();
             this.txtSalePrice = new MetroFramework.Controls.MetroTextBox();
             this.lblSalePrice = new MetroFramework.Controls.MetroLabel();
             this.txtEnviar = new MetroFramework.Controls.MetroTextBox();
@@ -56,7 +61,6 @@
             this.txtAdress = new MetroFramework.Controls.MetroTextBox();
             this.lblAdress = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
-            this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblId = new MetroFramework.Controls.MetroLabel();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
@@ -80,10 +84,6 @@
             this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtBilling = new MetroFramework.Controls.MetroTextBox();
-            this.lblBilling = new MetroFramework.Controls.MetroLabel();
-            this.txtTeC = new MetroFramework.Controls.MetroTextBox();
-            this.lblCompatyPo = new MetroFramework.Controls.MetroLabel();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
@@ -129,6 +129,90 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            // 
+            // txtTeC
+            // 
+            // 
+            // 
+            // 
+            this.txtTeC.CustomButton.Image = null;
+            this.txtTeC.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtTeC.CustomButton.Name = "";
+            this.txtTeC.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtTeC.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTeC.CustomButton.TabIndex = 1;
+            this.txtTeC.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTeC.CustomButton.UseSelectable = true;
+            this.txtTeC.CustomButton.Visible = false;
+            this.txtTeC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.saleBindingSource, "CompanyPhone", true));
+            this.txtTeC.Lines = new string[0];
+            this.txtTeC.Location = new System.Drawing.Point(182, 240);
+            this.txtTeC.MaxLength = 32767;
+            this.txtTeC.Name = "txtTeC";
+            this.txtTeC.PasswordChar = '\0';
+            this.txtTeC.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTeC.SelectedText = "";
+            this.txtTeC.SelectionLength = 0;
+            this.txtTeC.SelectionStart = 0;
+            this.txtTeC.ShortcutsEnabled = true;
+            this.txtTeC.Size = new System.Drawing.Size(160, 23);
+            this.txtTeC.TabIndex = 69;
+            this.txtTeC.UseSelectable = true;
+            this.txtTeC.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTeC.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // saleBindingSource
+            // 
+            this.saleBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Sale);
+            // 
+            // lblCompatyPo
+            // 
+            this.lblCompatyPo.AutoSize = true;
+            this.lblCompatyPo.Location = new System.Drawing.Point(14, 244);
+            this.lblCompatyPo.Name = "lblCompatyPo";
+            this.lblCompatyPo.Size = new System.Drawing.Size(123, 38);
+            this.lblCompatyPo.TabIndex = 68;
+            this.lblCompatyPo.Text = "Teléfono Compañia\r\n";
+            // 
+            // txtBilling
+            // 
+            // 
+            // 
+            // 
+            this.txtBilling.CustomButton.Image = null;
+            this.txtBilling.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txtBilling.CustomButton.Name = "";
+            this.txtBilling.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBilling.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBilling.CustomButton.TabIndex = 1;
+            this.txtBilling.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBilling.CustomButton.UseSelectable = true;
+            this.txtBilling.CustomButton.Visible = false;
+            this.txtBilling.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.saleBindingSource, "Billing", true));
+            this.txtBilling.Lines = new string[0];
+            this.txtBilling.Location = new System.Drawing.Point(182, 211);
+            this.txtBilling.MaxLength = 32767;
+            this.txtBilling.Name = "txtBilling";
+            this.txtBilling.PasswordChar = '\0';
+            this.txtBilling.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBilling.SelectedText = "";
+            this.txtBilling.SelectionLength = 0;
+            this.txtBilling.SelectionStart = 0;
+            this.txtBilling.ShortcutsEnabled = true;
+            this.txtBilling.Size = new System.Drawing.Size(160, 23);
+            this.txtBilling.TabIndex = 67;
+            this.txtBilling.UseSelectable = true;
+            this.txtBilling.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBilling.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblBilling
+            // 
+            this.lblBilling.AutoSize = true;
+            this.lblBilling.Location = new System.Drawing.Point(111, 215);
+            this.lblBilling.Name = "lblBilling";
+            this.lblBilling.Size = new System.Drawing.Size(44, 19);
+            this.lblBilling.TabIndex = 66;
+            this.lblBilling.Text = "Billing";
             // 
             // txtSalePrice
             // 
@@ -599,10 +683,6 @@
             this.txtId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtId.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // saleBindingSource
-            // 
-            this.saleBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Sale);
-            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
@@ -620,7 +700,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(63, 38);
             this.btnSalir.TabIndex = 60;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Actualizar";
             this.btnSalir.UseSelectable = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -733,6 +813,7 @@
             this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDatos.Size = new System.Drawing.Size(372, 179);
             this.grdDatos.TabIndex = 61;
+            this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick_1);
             // 
             // dataGridViewTextBoxColumn22
             // 
@@ -830,86 +911,6 @@
             this.dataGridViewTextBoxColumn36.DataPropertyName = "Employees";
             this.dataGridViewTextBoxColumn36.HeaderText = "Employees";
             this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            // 
-            // txtBilling
-            // 
-            // 
-            // 
-            // 
-            this.txtBilling.CustomButton.Image = null;
-            this.txtBilling.CustomButton.Location = new System.Drawing.Point(138, 1);
-            this.txtBilling.CustomButton.Name = "";
-            this.txtBilling.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtBilling.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBilling.CustomButton.TabIndex = 1;
-            this.txtBilling.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtBilling.CustomButton.UseSelectable = true;
-            this.txtBilling.CustomButton.Visible = false;
-            this.txtBilling.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.saleBindingSource, "Billing", true));
-            this.txtBilling.Lines = new string[0];
-            this.txtBilling.Location = new System.Drawing.Point(182, 211);
-            this.txtBilling.MaxLength = 32767;
-            this.txtBilling.Name = "txtBilling";
-            this.txtBilling.PasswordChar = '\0';
-            this.txtBilling.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBilling.SelectedText = "";
-            this.txtBilling.SelectionLength = 0;
-            this.txtBilling.SelectionStart = 0;
-            this.txtBilling.ShortcutsEnabled = true;
-            this.txtBilling.Size = new System.Drawing.Size(160, 23);
-            this.txtBilling.TabIndex = 67;
-            this.txtBilling.UseSelectable = true;
-            this.txtBilling.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBilling.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblBilling
-            // 
-            this.lblBilling.AutoSize = true;
-            this.lblBilling.Location = new System.Drawing.Point(111, 215);
-            this.lblBilling.Name = "lblBilling";
-            this.lblBilling.Size = new System.Drawing.Size(44, 19);
-            this.lblBilling.TabIndex = 66;
-            this.lblBilling.Text = "Billing";
-            // 
-            // txtTeC
-            // 
-            // 
-            // 
-            // 
-            this.txtTeC.CustomButton.Image = null;
-            this.txtTeC.CustomButton.Location = new System.Drawing.Point(138, 1);
-            this.txtTeC.CustomButton.Name = "";
-            this.txtTeC.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtTeC.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtTeC.CustomButton.TabIndex = 1;
-            this.txtTeC.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtTeC.CustomButton.UseSelectable = true;
-            this.txtTeC.CustomButton.Visible = false;
-            this.txtTeC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.saleBindingSource, "CompanyPhone", true));
-            this.txtTeC.Lines = new string[0];
-            this.txtTeC.Location = new System.Drawing.Point(182, 240);
-            this.txtTeC.MaxLength = 32767;
-            this.txtTeC.Name = "txtTeC";
-            this.txtTeC.PasswordChar = '\0';
-            this.txtTeC.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtTeC.SelectedText = "";
-            this.txtTeC.SelectionLength = 0;
-            this.txtTeC.SelectionStart = 0;
-            this.txtTeC.ShortcutsEnabled = true;
-            this.txtTeC.Size = new System.Drawing.Size(160, 23);
-            this.txtTeC.TabIndex = 69;
-            this.txtTeC.UseSelectable = true;
-            this.txtTeC.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtTeC.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblCompatyPo
-            // 
-            this.lblCompatyPo.AutoSize = true;
-            this.lblCompatyPo.Location = new System.Drawing.Point(14, 244);
-            this.lblCompatyPo.Name = "lblCompatyPo";
-            this.lblCompatyPo.Size = new System.Drawing.Size(123, 38);
-            this.lblCompatyPo.TabIndex = 68;
-            this.lblCompatyPo.Text = "Teléfono Compañia\r\n";
             // 
             // FrmSale
             // 

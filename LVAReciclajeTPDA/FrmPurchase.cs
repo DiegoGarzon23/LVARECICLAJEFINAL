@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,13 +21,17 @@ namespace LVAReciclajeTPDA
 
         private void FrmPurchase_Load(object sender, EventArgs e)
         {
+            using (DataContext dataContext = new DataContext())
+            {
+                purchaseBindingSource.DataSource =
+                    dataContext.Purchases.ToList();
+            }
+            pnlDatos.Enabled = false;
+            Purchase purchase = purchaseBindingSource.Current as Purchase;
 
         }
 
-        private void pnlDatos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -50,22 +55,7 @@ namespace LVAReciclajeTPDA
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd =
-               new OpenFileDialog()
-               {
-                  
-               })
-            {
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                   Purchase client =
-                        purchaseBindingSource.Current as Purchase;   
-
-                }
-            }
-        }
+    
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -78,7 +68,7 @@ namespace LVAReciclajeTPDA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             pnlDatos.Enabled = true;
-            txtCompany.Focus();
+            txtFullNameBuyer.Focus();
             Purchase purchase =
                 purchaseBindingSource.Current as Purchase;
         }
@@ -118,7 +108,10 @@ namespace LVAReciclajeTPDA
 
         private void grdDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            Purchase purchase = purchaseBindingSource.Current as Purchase;
 
         }
+
+       
     }
 }
