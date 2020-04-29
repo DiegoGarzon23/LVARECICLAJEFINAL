@@ -96,17 +96,24 @@ namespace LVAReciclajeTPDA
                         purchaseBindingSource.Current as Purchase;
                     if (purchase != null)
                     {
-                        if (dataContext.Entry<Client>(client).State == EntityState.Detached)
-                            dataContext.Set<Client>().Attach(client);
-                        dataContext.Entry<Client>(client).State = EntityState.Deleted;
+                        if (dataContext.Entry<Purchase>(purchase).State == EntityState.Detached)
+                            dataContext.Set<Purchase>().Attach(purchase);
+                        dataContext.Entry<Purchase>(purchase).State = EntityState.Deleted;
                         dataContext.SaveChanges();
                         MetroFramework.MetroMessageBox.Show(this, "Cliente eliminado");
-                        clientBindingSource.RemoveCurrent();
-                        pctFoto.Image = null;
+                        purchaseBindingSource.RemoveCurrent();
+                        pctPurchase.Image = null;
                         pnlDatos.Enabled = false;
                     }
                 }
             }
+        }
+
+        private void btnSalirPurchase_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = false;
+            purchaseBindingSource.ResetBindings(false);
+            FrmPurchase_Load(sender, e);
         }
     }
 }
