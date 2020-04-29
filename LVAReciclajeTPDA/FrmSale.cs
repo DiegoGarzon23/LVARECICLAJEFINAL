@@ -26,7 +26,7 @@ namespace LVAReciclajeTPDA
         {
             using (DataContext dataContext = new DataContext())
             {
-                sale sale =
+                Sale sale =
                 saleBindingSource.Current as sale;
                 if (sale != null)
                 {
@@ -39,7 +39,7 @@ namespace LVAReciclajeTPDA
                     dataContext.SaveChanges();
                     MetroFramework.MetroMessageBox.Show(this, "Vendedor guardado");
                     grdDatos.Refresh();
-                    pnlDatos.Enabled = false;
+                    pnlSale.Enabled = false;
                 }
             }
         }
@@ -61,15 +61,15 @@ namespace LVAReciclajeTPDA
                     dataContext.SaveChanges();
                     MetroFramework.MetroMessageBox.Show(this, "Vendedor guardado");
                     grdDatos.Refresh();
-                    pnlDatos.Enabled = false;
+                    pnlSale.Enabled = false;
                 }
             }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            pnlDatos.Enabled = true;
-            pctFoto.Image = null;
+            pnlSale.Enabled = true;
+            pctSale.Image = null;
             saleBindingSource.Add(new Sale());
             saleBindingSource.MoveLast();
             txtName.Focus();
@@ -77,7 +77,7 @@ namespace LVAReciclajeTPDA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            pnlDatos.Enabled = true;
+            pnlSale.Enabled = true;
             txtName.Focus();
             Sale sale =
                 saleBindingSource.Current as Sale;
@@ -103,11 +103,29 @@ namespace LVAReciclajeTPDA
                         dataContext.SaveChanges();
                         MetroFramework.MetroMessageBox.Show(this, "Vendedor eliminado");
                         saleBindingSource.RemoveCurrent();
-                        pctFoto.Image = null;
-                        pnlDatos.Enabled = false;
+                        pctSale.Image = null;
+                        pnlSale.Enabled = false;
                     }
                 }
             }
         }
+
+        private void grdDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Sale client = saleBindingSource.Current as Sale;
+            if (client != null && client.ImageUrl != null)
+                pctSale.Image = Image.FromFile(client.ImageUrl);
+            else
+                pctSale.Image = null;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            pnlSale.Enabled = false;
+            saleBindingSource.ResetBindings(false);
+            FrmSale_Load(sender, e);
+        }
     }
 }
+
+
