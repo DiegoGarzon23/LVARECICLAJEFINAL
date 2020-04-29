@@ -222,6 +222,10 @@
     <Compile Include="Migrations\202004291854471_Prueba4.designer.cs">
       <DependentUpon>202004291854471_Prueba4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004291930089_Prueba5.cs" />
+    <Compile Include="Migrations\202004291930089_Prueba5.designer.cs">
+      <DependentUpon>202004291930089_Prueba5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004291854471_Prueba4.resx">
       <DependentUpon>202004291854471_Prueba4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004291930089_Prueba5.resx">
+      <DependentUpon>202004291930089_Prueba5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

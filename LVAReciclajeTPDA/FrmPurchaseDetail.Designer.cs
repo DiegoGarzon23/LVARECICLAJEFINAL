@@ -33,19 +33,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
-            this.purchaseDetailBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assingmentDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseDetailBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.lblName = new MetroFramework.Controls.MetroLabel();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
             this.lblDescription = new MetroFramework.Controls.MetroLabel();
-            this.txtDateT = new MetroFramework.Controls.MetroDateTime();
+            this.txtDateTTT = new MetroFramework.Controls.MetroDateTime();
             this.lblDateTime = new MetroFramework.Controls.MetroLabel();
             this.txtLd = new MetroFramework.Controls.MetroTextBox();
             this.lblId = new MetroFramework.Controls.MetroLabel();
@@ -54,6 +54,8 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
+            this.txtDatteTimee = new MetroFramework.Controls.MetroDateTime();
+            this.lblDateFF = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailBindingSource1)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -112,10 +114,6 @@
             this.grdDatos.TabIndex = 0;
             this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
             // 
-            // purchaseDetailBindingSource1
-            // 
-            this.purchaseDetailBindingSource1.DataSource = typeof(LVAReciclajeTPDA.Data.PurchaseDetail);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -153,13 +151,19 @@
             this.productDataGridViewTextBoxColumn.HeaderText = "Product";
             this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
             // 
+            // purchaseDetailBindingSource1
+            // 
+            this.purchaseDetailBindingSource1.DataSource = typeof(LVAReciclajeTPDA.Data.PurchaseDetail);
+            // 
             // pnlDatos
             // 
+            this.pnlDatos.Controls.Add(this.txtDatteTimee);
+            this.pnlDatos.Controls.Add(this.lblDateFF);
             this.pnlDatos.Controls.Add(this.txtName);
             this.pnlDatos.Controls.Add(this.lblName);
             this.pnlDatos.Controls.Add(this.txtDescription);
             this.pnlDatos.Controls.Add(this.lblDescription);
-            this.pnlDatos.Controls.Add(this.txtDateT);
+            this.pnlDatos.Controls.Add(this.txtDateTTT);
             this.pnlDatos.Controls.Add(this.lblDateTime);
             this.pnlDatos.Controls.Add(this.txtLd);
             this.pnlDatos.Controls.Add(this.lblId);
@@ -168,7 +172,7 @@
             this.pnlDatos.HorizontalScrollbarSize = 10;
             this.pnlDatos.Location = new System.Drawing.Point(251, 63);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(448, 161);
+            this.pnlDatos.Size = new System.Drawing.Size(448, 194);
             this.pnlDatos.TabIndex = 1;
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
@@ -230,7 +234,7 @@
             this.txtDescription.CustomButton.Visible = false;
             this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseDetailBindingSource1, "Description", true));
             this.txtDescription.Lines = new string[0];
-            this.txtDescription.Location = new System.Drawing.Point(123, 106);
+            this.txtDescription.Location = new System.Drawing.Point(123, 144);
             this.txtDescription.MaxLength = 32767;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
@@ -248,20 +252,20 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(3, 106);
+            this.lblDescription.Location = new System.Drawing.Point(3, 144);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(76, 19);
             this.lblDescription.TabIndex = 18;
             this.lblDescription.Text = "Descripción";
             // 
-            // txtDateT
+            // txtDateTTT
             // 
-            this.txtDateT.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.purchaseDetailBindingSource1, "AssingmentDate", true));
-            this.txtDateT.Location = new System.Drawing.Point(123, 70);
-            this.txtDateT.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtDateT.Name = "txtDateT";
-            this.txtDateT.Size = new System.Drawing.Size(306, 29);
-            this.txtDateT.TabIndex = 15;
+            this.txtDateTTT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseDetailBindingSource1, "AssingmentDate", true));
+            this.txtDateTTT.Location = new System.Drawing.Point(123, 70);
+            this.txtDateTTT.MinimumSize = new System.Drawing.Size(0, 29);
+            this.txtDateTTT.Name = "txtDateTTT";
+            this.txtDateTTT.Size = new System.Drawing.Size(306, 29);
+            this.txtDateTTT.TabIndex = 15;
             // 
             // lblDateTime
             // 
@@ -316,7 +320,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Maroon;
             this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnSalir.Location = new System.Drawing.Point(622, 230);
+            this.btnSalir.Location = new System.Drawing.Point(622, 263);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 38);
             this.btnSalir.TabIndex = 64;
@@ -328,7 +332,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Maroon;
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEliminar.Location = new System.Drawing.Point(528, 230);
+            this.btnEliminar.Location = new System.Drawing.Point(528, 263);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(78, 38);
             this.btnEliminar.TabIndex = 63;
@@ -340,7 +344,7 @@
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Maroon;
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEditar.Location = new System.Drawing.Point(441, 230);
+            this.btnEditar.Location = new System.Drawing.Point(441, 263);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(72, 38);
             this.btnEditar.TabIndex = 62;
@@ -352,7 +356,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Maroon;
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnAgregar.Location = new System.Drawing.Point(352, 230);
+            this.btnAgregar.Location = new System.Drawing.Point(352, 263);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(83, 38);
             this.btnAgregar.TabIndex = 61;
@@ -364,13 +368,30 @@
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Black;
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGuardar.Location = new System.Drawing.Point(251, 230);
+            this.btnGuardar.Location = new System.Drawing.Point(251, 263);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(91, 38);
             this.btnGuardar.TabIndex = 60;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseSelectable = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtDatteTimee
+            // 
+            this.txtDatteTimee.Location = new System.Drawing.Point(123, 105);
+            this.txtDatteTimee.MinimumSize = new System.Drawing.Size(0, 29);
+            this.txtDatteTimee.Name = "txtDatteTimee";
+            this.txtDatteTimee.Size = new System.Drawing.Size(306, 29);
+            this.txtDatteTimee.TabIndex = 23;
+            // 
+            // lblDateFF
+            // 
+            this.lblDateFF.AutoSize = true;
+            this.lblDateFF.Location = new System.Drawing.Point(3, 112);
+            this.lblDateFF.Name = "lblDateFF";
+            this.lblDateFF.Size = new System.Drawing.Size(114, 19);
+            this.lblDateFF.TabIndex = 22;
+            this.lblDateFF.Text = "Fecha Finalización";
             // 
             // FrmPurchaseDetail
             // 
@@ -410,7 +431,7 @@
         private MetroFramework.Controls.MetroLabel lblName;
         private MetroFramework.Controls.MetroTextBox txtDescription;
         private MetroFramework.Controls.MetroLabel lblDescription;
-        private MetroFramework.Controls.MetroDateTime txtDateT;
+        private MetroFramework.Controls.MetroDateTime txtDateTTT;
         private MetroFramework.Controls.MetroLabel lblDateTime;
         private MetroFramework.Controls.MetroTextBox txtLd;
         private MetroFramework.Controls.MetroLabel lblId;
@@ -419,5 +440,7 @@
         private MetroFramework.Controls.MetroButton btnEditar;
         private MetroFramework.Controls.MetroButton btnAgregar;
         private MetroFramework.Controls.MetroButton btnGuardar;
+        private MetroFramework.Controls.MetroDateTime txtDatteTimee;
+        private MetroFramework.Controls.MetroLabel lblDateFF;
     }
 }
