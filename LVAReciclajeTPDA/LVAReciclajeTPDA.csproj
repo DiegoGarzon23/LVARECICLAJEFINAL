@@ -176,11 +176,23 @@
     <Compile Include="FrmPurchase.Designer.cs">
       <DependentUpon>FrmPurchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPurchaseDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPurchaseDetail.Designer.cs">
+      <DependentUpon>FrmPurchaseDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSale.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSale.Designer.cs">
       <DependentUpon>FrmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSaleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSaleDetail.Designer.cs">
+      <DependentUpon>FrmSaleDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202004150325155_AppReciclaje.cs" />
     <Compile Include="Migrations\202004150325155_AppReciclaje.designer.cs">
@@ -220,8 +232,14 @@
     <EmbeddedResource Include="FrmPurchase.resx">
       <DependentUpon>FrmPurchase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPurchaseDetail.resx">
+      <DependentUpon>FrmPurchaseDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSale.resx">
       <DependentUpon>FrmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSaleDetail.resx">
+      <DependentUpon>FrmSaleDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004150325155_AppReciclaje.resx">
       <DependentUpon>202004150325155_AppReciclaje.cs</DependentUpon>
@@ -254,7 +272,9 @@
     <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.Product.datasource" />
     <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.Provider.datasource" />
     <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.Purchase.datasource" />
+    <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.PurchaseDetail.datasource" />
     <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.Sale.datasource" />
+    <None Include="Properties\DataSources\LVAReciclajeTPDA.Data.SaleDetail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

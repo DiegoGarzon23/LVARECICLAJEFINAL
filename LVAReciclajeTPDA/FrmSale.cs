@@ -1,7 +1,9 @@
-﻿using System;
+﻿using LVAReciclajeTPDA.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +21,14 @@ namespace LVAReciclajeTPDA
 
         private void FrmSale_Load(object sender, EventArgs e)
         {
+            using (DataContext dataContext = new DataContext())
+            {
+                saleBindingSource.DataSource =
+                    dataContext.Sales.ToList();
+            }
+            pnlDatos.Enabled = false;
+            Sale sale = saleBindingSource.Current as Sale;
+            
 
         }
 
@@ -27,7 +37,7 @@ namespace LVAReciclajeTPDA
             using (DataContext dataContext = new DataContext())
             {
                 Sale sale =
-                saleBindingSource.Current as sale;
+                saleBindingSource.Current as Sale;
                 if (sale != null)
                 {
                     if (dataContext.Entry<Sale>(sale).State == EntityState.Detached)
@@ -39,46 +49,26 @@ namespace LVAReciclajeTPDA
                     dataContext.SaveChanges();
                     MetroFramework.MetroMessageBox.Show(this, "Vendedor guardado");
                     grdDatos.Refresh();
-                    pnlSale.Enabled = false;
+                    pnlDatos.Enabled = false;
                 }
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            using (DataContext dataContext = new DataContext())
-            {
-                Sale sale =
-                saleBindingSource.Current as Sale;
-                if (client != null)
-                {
-                    if (dataContext.Entry<Sale>(sale).State == EntityState.Detached)
-                        dataContext.Set<Sale>().Attach(sale);
-                    if (sale.Id == 0)
-                        dataContext.Entry<Sale>(sale).State = EntityState.Added;
-                    else
-                        dataContext.Entry<Sale>(sale).State = EntityState.Modified;
-                    dataContext.SaveChanges();
-                    MetroFramework.MetroMessageBox.Show(this, "Vendedor guardado");
-                    grdDatos.Refresh();
-                    pnlSale.Enabled = false;
-                }
-            }
-        }
+      
+        
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            pnlSale.Enabled = true;
-            pctSale.Image = null;
+            pnlDatos.Enabled = true;
             saleBindingSource.Add(new Sale());
             saleBindingSource.MoveLast();
-            txtName.Focus();
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            pnlSale.Enabled = true;
-            txtName.Focus();
+            pnlDatos.Enabled = true;
+            txtBrand.Focus();
             Sale sale =
                 saleBindingSource.Current as Sale;
         }
@@ -95,7 +85,7 @@ namespace LVAReciclajeTPDA
                 {
                     Sale sale =
                         saleBindingSource.Current as Sale;
-                    if (client != null)
+                    if (sale != null)
                     {
                         if (dataContext.Entry<Sale>(sale).State == EntityState.Detached)
                             dataContext.Set<Sale>().Attach(sale);
@@ -103,8 +93,7 @@ namespace LVAReciclajeTPDA
                         dataContext.SaveChanges();
                         MetroFramework.MetroMessageBox.Show(this, "Vendedor eliminado");
                         saleBindingSource.RemoveCurrent();
-                        pctSale.Image = null;
-                        pnlSale.Enabled = false;
+                        pnlDatos.Enabled = false;
                     }
                 }
             }
@@ -113,15 +102,12 @@ namespace LVAReciclajeTPDA
         private void grdDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Sale client = saleBindingSource.Current as Sale;
-            if (client != null && client.ImageUrl != null)
-                pctSale.Image = Image.FromFile(client.ImageUrl);
-            else
-                pctSale.Image = null;
+         
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            pnlSale.Enabled = false;
+            pnlDatos.Enabled = false;
             saleBindingSource.ResetBindings(false);
             FrmSale_Load(sender, e);
         }
