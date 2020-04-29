@@ -41,6 +41,8 @@
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseDetailBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.txtDatteTimee = new MetroFramework.Controls.MetroDateTime();
+            this.lblDateFF = new MetroFramework.Controls.MetroLabel();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.lblName = new MetroFramework.Controls.MetroLabel();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
@@ -54,8 +56,6 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
-            this.txtDatteTimee = new MetroFramework.Controls.MetroDateTime();
-            this.lblDateFF = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailBindingSource1)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -177,6 +177,23 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            // 
+            // txtDatteTimee
+            // 
+            this.txtDatteTimee.Location = new System.Drawing.Point(123, 105);
+            this.txtDatteTimee.MinimumSize = new System.Drawing.Size(0, 29);
+            this.txtDatteTimee.Name = "txtDatteTimee";
+            this.txtDatteTimee.Size = new System.Drawing.Size(306, 29);
+            this.txtDatteTimee.TabIndex = 23;
+            // 
+            // lblDateFF
+            // 
+            this.lblDateFF.AutoSize = true;
+            this.lblDateFF.Location = new System.Drawing.Point(3, 112);
+            this.lblDateFF.Name = "lblDateFF";
+            this.lblDateFF.Size = new System.Drawing.Size(114, 19);
+            this.lblDateFF.TabIndex = 22;
+            this.lblDateFF.Text = "Fecha Finalización";
             // 
             // txtName
             // 
@@ -324,7 +341,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 38);
             this.btnSalir.TabIndex = 64;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Actualizar";
             this.btnSalir.UseSelectable = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -375,23 +392,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseSelectable = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtDatteTimee
-            // 
-            this.txtDatteTimee.Location = new System.Drawing.Point(123, 105);
-            this.txtDatteTimee.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtDatteTimee.Name = "txtDatteTimee";
-            this.txtDatteTimee.Size = new System.Drawing.Size(306, 29);
-            this.txtDatteTimee.TabIndex = 23;
-            // 
-            // lblDateFF
-            // 
-            this.lblDateFF.AutoSize = true;
-            this.lblDateFF.Location = new System.Drawing.Point(3, 112);
-            this.lblDateFF.Name = "lblDateFF";
-            this.lblDateFF.Size = new System.Drawing.Size(114, 19);
-            this.lblDateFF.TabIndex = 22;
-            this.lblDateFF.Text = "Fecha Finalización";
             // 
             // FrmPurchaseDetail
             // 

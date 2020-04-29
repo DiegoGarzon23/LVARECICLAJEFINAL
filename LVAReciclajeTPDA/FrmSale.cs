@@ -112,10 +112,7 @@ namespace LVAReciclajeTPDA
             FrmSale_Load(sender, e);
         }
 
-        private void pnlDatos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }
 

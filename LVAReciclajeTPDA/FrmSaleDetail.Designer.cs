@@ -29,19 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.dtFechaF = new MetroFramework.Controls.MetroDateTime();
+            this.dtFechaA = new MetroFramework.Controls.MetroDateTime();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.lblName = new MetroFramework.Controls.MetroLabel();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
             this.lblDescription = new MetroFramework.Controls.MetroLabel();
+            this.lblDateF = new MetroFramework.Controls.MetroLabel();
+            this.lblDateTimeT = new MetroFramework.Controls.MetroLabel();
             this.txtLd = new MetroFramework.Controls.MetroTextBox();
             this.lblId = new MetroFramework.Controls.MetroLabel();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
@@ -49,10 +53,6 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
-            this.lblDateF = new MetroFramework.Controls.MetroLabel();
-            this.lblDateTimeT = new MetroFramework.Controls.MetroLabel();
-            this.dtFechaA = new MetroFramework.Controls.MetroDateTime();
-            this.dtFechaF = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleDetailBindingSource)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -66,42 +66,42 @@
             this.grdDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.productDataGridViewTextBoxColumn,
             this.saleDataGridViewTextBoxColumn});
             this.grdDatos.DataSource = this.saleDetailBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle5;
             this.grdDatos.EnableHeadersVisualStyles = false;
             this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grdDatos.Location = new System.Drawing.Point(5, 63);
             this.grdDatos.Name = "grdDatos";
             this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDatos.Size = new System.Drawing.Size(240, 179);
@@ -153,6 +153,24 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            // 
+            // dtFechaF
+            // 
+            this.dtFechaF.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.saleDetailBindingSource, "TerminationDate", true));
+            this.dtFechaF.Location = new System.Drawing.Point(132, 105);
+            this.dtFechaF.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFechaF.Name = "dtFechaF";
+            this.dtFechaF.Size = new System.Drawing.Size(306, 29);
+            this.dtFechaF.TabIndex = 13;
+            // 
+            // dtFechaA
+            // 
+            this.dtFechaA.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.saleDetailBindingSource, "AssingmentDate", true));
+            this.dtFechaA.Location = new System.Drawing.Point(132, 70);
+            this.dtFechaA.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFechaA.Name = "dtFechaA";
+            this.dtFechaA.Size = new System.Drawing.Size(306, 29);
+            this.dtFechaA.TabIndex = 12;
             // 
             // txtName
             // 
@@ -234,6 +252,24 @@
             this.lblDescription.TabIndex = 8;
             this.lblDescription.Text = "Descripción";
             // 
+            // lblDateF
+            // 
+            this.lblDateF.AutoSize = true;
+            this.lblDateF.Location = new System.Drawing.Point(12, 112);
+            this.lblDateF.Name = "lblDateF";
+            this.lblDateF.Size = new System.Drawing.Size(114, 19);
+            this.lblDateF.TabIndex = 6;
+            this.lblDateF.Text = "Fecha Finalización";
+            // 
+            // lblDateTimeT
+            // 
+            this.lblDateTimeT.AutoSize = true;
+            this.lblDateTimeT.Location = new System.Drawing.Point(12, 70);
+            this.lblDateTimeT.Name = "lblDateTimeT";
+            this.lblDateTimeT.Size = new System.Drawing.Size(110, 19);
+            this.lblDateTimeT.TabIndex = 4;
+            this.lblDateTimeT.Text = "Fecha Asignación";
+            // 
             // txtLd
             // 
             // 
@@ -278,11 +314,11 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Maroon;
             this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnSalir.Location = new System.Drawing.Point(624, 248);
+            this.btnSalir.Location = new System.Drawing.Point(615, 248);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 38);
             this.btnSalir.TabIndex = 59;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Actualizar";
             this.btnSalir.UseSelectable = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -290,7 +326,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Maroon;
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEliminar.Location = new System.Drawing.Point(540, 248);
+            this.btnEliminar.Location = new System.Drawing.Point(533, 248);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(78, 38);
             this.btnEliminar.TabIndex = 58;
@@ -302,7 +338,7 @@
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Maroon;
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEditar.Location = new System.Drawing.Point(462, 248);
+            this.btnEditar.Location = new System.Drawing.Point(455, 248);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(72, 38);
             this.btnEditar.TabIndex = 57;
@@ -314,7 +350,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Maroon;
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnAgregar.Location = new System.Drawing.Point(373, 248);
+            this.btnAgregar.Location = new System.Drawing.Point(366, 248);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(83, 38);
             this.btnAgregar.TabIndex = 56;
@@ -326,7 +362,7 @@
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Black;
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGuardar.Location = new System.Drawing.Point(276, 248);
+            this.btnGuardar.Location = new System.Drawing.Point(269, 248);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(91, 38);
             this.btnGuardar.TabIndex = 55;
@@ -334,47 +370,11 @@
             this.btnGuardar.UseSelectable = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // lblDateF
-            // 
-            this.lblDateF.AutoSize = true;
-            this.lblDateF.Location = new System.Drawing.Point(12, 112);
-            this.lblDateF.Name = "lblDateF";
-            this.lblDateF.Size = new System.Drawing.Size(114, 19);
-            this.lblDateF.TabIndex = 6;
-            this.lblDateF.Text = "Fecha Finalización";
-            // 
-            // lblDateTimeT
-            // 
-            this.lblDateTimeT.AutoSize = true;
-            this.lblDateTimeT.Location = new System.Drawing.Point(12, 70);
-            this.lblDateTimeT.Name = "lblDateTimeT";
-            this.lblDateTimeT.Size = new System.Drawing.Size(110, 19);
-            this.lblDateTimeT.TabIndex = 4;
-            this.lblDateTimeT.Text = "Fecha Asignación";
-            // 
-            // dtFechaA
-            // 
-            this.dtFechaA.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.saleDetailBindingSource, "AssingmentDate", true));
-            this.dtFechaA.Location = new System.Drawing.Point(132, 70);
-            this.dtFechaA.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtFechaA.Name = "dtFechaA";
-            this.dtFechaA.Size = new System.Drawing.Size(306, 29);
-            this.dtFechaA.TabIndex = 12;
-            // 
-            // dtFechaF
-            // 
-            this.dtFechaF.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.saleDetailBindingSource, "TerminationDate", true));
-            this.dtFechaF.Location = new System.Drawing.Point(132, 105);
-            this.dtFechaF.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtFechaF.Name = "dtFechaF";
-            this.dtFechaF.Size = new System.Drawing.Size(306, 29);
-            this.dtFechaF.TabIndex = 13;
-            // 
             // FrmSaleDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(748, 318);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);

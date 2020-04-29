@@ -136,6 +136,8 @@ namespace LVAReciclajeTPDA
                 pctFoto.Image = null;
         }
 
-     
+        private void providerBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+                    }
     }
 }

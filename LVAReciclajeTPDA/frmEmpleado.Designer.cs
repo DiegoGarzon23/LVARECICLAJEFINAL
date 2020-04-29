@@ -32,8 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.grdDatos = new MetroFramework.Controls.MetroGrid();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.cmbSeguroSocial = new MetroFramework.Controls.MetroComboBox();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbEstadoCivil = new MetroFramework.Controls.MetroComboBox();
+            this.cmbGenero = new MetroFramework.Controls.MetroComboBox();
             this.cbmCiudad = new MetroFramework.Controls.MetroComboBox();
             this.pctFoto = new System.Windows.Forms.PictureBox();
             this.cbmLugarNacimiento = new MetroFramework.Controls.MetroComboBox();
@@ -62,90 +65,26 @@
             this.btnBuscar = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
-            this.cmbGenero = new MetroFramework.Controls.MetroComboBox();
-            this.cmbEstadoCivil = new MetroFramework.Controls.MetroComboBox();
-            this.cmbSeguroSocial = new MetroFramework.Controls.MetroComboBox();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contrasenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maritalStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placeOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.healthInsuranceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
+            this.grdDatos = new MetroFramework.Controls.MetroGrid();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageUrlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grdDatos
-            // 
-            this.grdDatos.AllowUserToResizeRows = false;
-            this.grdDatos.AutoGenerateColumns = false;
-            this.grdDatos.BackgroundColor = System.Drawing.Color.Silver;
-            this.grdDatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grdDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.grdDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.fullNameDataGridViewTextBoxColumn,
-            this.numberPhoneDataGridViewTextBoxColumn,
-            this.contactEmailDataGridViewTextBoxColumn,
-            this.contrasenaDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.zipCodeDataGridViewTextBoxColumn,
-            this.streetNumberDataGridViewTextBoxColumn,
-            this.cityDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.maritalStatusDataGridViewTextBoxColumn,
-            this.placeOfBirthDataGridViewTextBoxColumn,
-            this.healthInsuranceDataGridViewTextBoxColumn,
-            this.salesDataGridViewTextBoxColumn});
-            this.grdDatos.DataSource = this.employeeBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grdDatos.EnableHeadersVisualStyles = false;
-            this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.grdDatos.Location = new System.Drawing.Point(23, 61);
-            this.grdDatos.Name = "grdDatos";
-            this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDatos.Size = new System.Drawing.Size(255, 297);
-            this.grdDatos.TabIndex = 4;
-            this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
             // 
             // pnlDatos
             // 
@@ -187,6 +126,53 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            // 
+            // cmbSeguroSocial
+            // 
+            this.cmbSeguroSocial.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "HealthInsurance", true));
+            this.cmbSeguroSocial.FormattingEnabled = true;
+            this.cmbSeguroSocial.ItemHeight = 23;
+            this.cmbSeguroSocial.Items.AddRange(new object[] {
+            "IMSS",
+            "ISSSTE"});
+            this.cmbSeguroSocial.Location = new System.Drawing.Point(335, 225);
+            this.cmbSeguroSocial.Name = "cmbSeguroSocial";
+            this.cmbSeguroSocial.Size = new System.Drawing.Size(418, 29);
+            this.cmbSeguroSocial.TabIndex = 46;
+            this.cmbSeguroSocial.UseSelectable = true;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Employee);
+            // 
+            // cmbEstadoCivil
+            // 
+            this.cmbEstadoCivil.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "MaritalStatus", true));
+            this.cmbEstadoCivil.FormattingEnabled = true;
+            this.cmbEstadoCivil.ItemHeight = 23;
+            this.cmbEstadoCivil.Items.AddRange(new object[] {
+            "Soltero",
+            "Casado",
+            "Divorciado"});
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(335, 190);
+            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
+            this.cmbEstadoCivil.Size = new System.Drawing.Size(418, 29);
+            this.cmbEstadoCivil.TabIndex = 45;
+            this.cmbEstadoCivil.UseSelectable = true;
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "Gender", true));
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.ItemHeight = 23;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.cmbGenero.Location = new System.Drawing.Point(81, 226);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(132, 29);
+            this.cmbGenero.TabIndex = 44;
+            this.cmbGenero.UseSelectable = true;
             // 
             // cbmCiudad
             // 
@@ -649,141 +635,154 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(110, 38);
             this.btnSalir.TabIndex = 48;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Actualizar";
             this.btnSalir.UseSelectable = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cmbGenero
+            // grdDatos
             // 
-            this.cmbGenero.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "Gender", true));
-            this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.ItemHeight = 23;
-            this.cmbGenero.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
-            this.cmbGenero.Location = new System.Drawing.Point(81, 226);
-            this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(132, 29);
-            this.cmbGenero.TabIndex = 44;
-            this.cmbGenero.UseSelectable = true;
+            this.grdDatos.AllowUserToResizeRows = false;
+            this.grdDatos.AutoGenerateColumns = false;
+            this.grdDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grdDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.grdDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.imageUrlDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn13});
+            this.grdDatos.DataSource = this.employeeBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdDatos.EnableHeadersVisualStyles = false;
+            this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grdDatos.Location = new System.Drawing.Point(12, 47);
+            this.grdDatos.Name = "grdDatos";
+            this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdDatos.Size = new System.Drawing.Size(266, 149);
+            this.grdDatos.TabIndex = 49;
             // 
-            // cmbEstadoCivil
+            // dataGridViewTextBoxColumn1
             // 
-            this.cmbEstadoCivil.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "MaritalStatus", true));
-            this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.ItemHeight = 23;
-            this.cmbEstadoCivil.Items.AddRange(new object[] {
-            "Soltero",
-            "Casado",
-            "Divorciado"});
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(335, 190);
-            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(418, 29);
-            this.cmbEstadoCivil.TabIndex = 45;
-            this.cmbEstadoCivil.UseSelectable = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // cmbSeguroSocial
+            // dataGridViewTextBoxColumn2
             // 
-            this.cmbSeguroSocial.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "HealthInsurance", true));
-            this.cmbSeguroSocial.FormattingEnabled = true;
-            this.cmbSeguroSocial.ItemHeight = 23;
-            this.cmbSeguroSocial.Items.AddRange(new object[] {
-            "IMSS",
-            "ISSSTE"});
-            this.cmbSeguroSocial.Location = new System.Drawing.Point(335, 225);
-            this.cmbSeguroSocial.Name = "cmbSeguroSocial";
-            this.cmbSeguroSocial.Size = new System.Drawing.Size(418, 29);
-            this.cmbSeguroSocial.TabIndex = 46;
-            this.cmbSeguroSocial.UseSelectable = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "FullName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // employeeBindingSource
+            // dataGridViewTextBoxColumn3
             // 
-//            this.employeeBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Employee);
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NumberPhone";
+            this.dataGridViewTextBoxColumn3.HeaderText = "NumberPhone";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // idDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ContactEmail";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ContactEmail";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // fullNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Address";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // numberPhoneDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.numberPhoneDataGridViewTextBoxColumn.DataPropertyName = "NumberPhone";
-            this.numberPhoneDataGridViewTextBoxColumn.HeaderText = "NumberPhone";
-            this.numberPhoneDataGridViewTextBoxColumn.Name = "numberPhoneDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ZipCode";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ZipCode";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // contactEmailDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.contactEmailDataGridViewTextBoxColumn.DataPropertyName = "ContactEmail";
-            this.contactEmailDataGridViewTextBoxColumn.HeaderText = "ContactEmail";
-            this.contactEmailDataGridViewTextBoxColumn.Name = "contactEmailDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "StreetNumber";
+            this.dataGridViewTextBoxColumn7.HeaderText = "StreetNumber";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // contrasenaDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn8
             // 
-            this.contrasenaDataGridViewTextBoxColumn.DataPropertyName = "Contrasena";
-            this.contrasenaDataGridViewTextBoxColumn.HeaderText = "Contrasena";
-            this.contrasenaDataGridViewTextBoxColumn.Name = "contrasenaDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "City";
+            this.dataGridViewTextBoxColumn8.HeaderText = "City";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // addressDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn9
             // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Gender";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Gender";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // zipCodeDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn10
             // 
-            this.zipCodeDataGridViewTextBoxColumn.DataPropertyName = "ZipCode";
-            this.zipCodeDataGridViewTextBoxColumn.HeaderText = "ZipCode";
-            this.zipCodeDataGridViewTextBoxColumn.Name = "zipCodeDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "MaritalStatus";
+            this.dataGridViewTextBoxColumn10.HeaderText = "MaritalStatus";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // streetNumberDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn11
             // 
-            this.streetNumberDataGridViewTextBoxColumn.DataPropertyName = "StreetNumber";
-            this.streetNumberDataGridViewTextBoxColumn.HeaderText = "StreetNumber";
-            this.streetNumberDataGridViewTextBoxColumn.Name = "streetNumberDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "PlaceOfBirth";
+            this.dataGridViewTextBoxColumn11.HeaderText = "PlaceOfBirth";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
-            // cityDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn12
             // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "HealthInsurance";
+            this.dataGridViewTextBoxColumn12.HeaderText = "HealthInsurance";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // genderDataGridViewTextBoxColumn
+            // imageUrlDataGridViewTextBoxColumn
             // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.imageUrlDataGridViewTextBoxColumn.DataPropertyName = "ImageUrl";
+            this.imageUrlDataGridViewTextBoxColumn.HeaderText = "ImageUrl";
+            this.imageUrlDataGridViewTextBoxColumn.Name = "imageUrlDataGridViewTextBoxColumn";
             // 
-            // maritalStatusDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn13
             // 
-            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "MaritalStatus";
-            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "MaritalStatus";
-            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
-            // 
-            // placeOfBirthDataGridViewTextBoxColumn
-            // 
-            this.placeOfBirthDataGridViewTextBoxColumn.DataPropertyName = "PlaceOfBirth";
-            this.placeOfBirthDataGridViewTextBoxColumn.HeaderText = "PlaceOfBirth";
-            this.placeOfBirthDataGridViewTextBoxColumn.Name = "placeOfBirthDataGridViewTextBoxColumn";
-            // 
-            // healthInsuranceDataGridViewTextBoxColumn
-            // 
-            this.healthInsuranceDataGridViewTextBoxColumn.DataPropertyName = "HealthInsurance";
-            this.healthInsuranceDataGridViewTextBoxColumn.HeaderText = "HealthInsurance";
-            this.healthInsuranceDataGridViewTextBoxColumn.Name = "healthInsuranceDataGridViewTextBoxColumn";
-            // 
-            // salesDataGridViewTextBoxColumn
-            // 
-            this.salesDataGridViewTextBoxColumn.DataPropertyName = "Sales";
-            this.salesDataGridViewTextBoxColumn.HeaderText = "Sales";
-            this.salesDataGridViewTextBoxColumn.Name = "salesDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Sales";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Sales";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // frmEmpleado
             // 
@@ -791,31 +790,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1065, 388);
+            this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.btnGuardar);
             this.ForeColor = System.Drawing.Color.SpringGreen;
             this.Name = "frmEmpleado";
             this.Text = "Empleado";
             this.Load += new System.EventHandler(this.FrmEmpleado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroGrid grdDatos;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberPhoneDataGridViewTextBoxColumn;
@@ -862,5 +858,21 @@
         private MetroFramework.Controls.MetroComboBox cmbSeguroSocial;
         private MetroFramework.Controls.MetroComboBox cmbEstadoCivil;
         private MetroFramework.Controls.MetroComboBox cmbGenero;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private MetroFramework.Controls.MetroGrid grdDatos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imageUrlDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
     }
 }
