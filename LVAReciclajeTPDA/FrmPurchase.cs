@@ -31,16 +31,16 @@ namespace LVAReciclajeTPDA
         {
             using (DataContext dataContext = new DataContext())
             {
-                Sale sale =
-                saleBindingSource.Current as Sale;
-                if (sale != null)
+                Purchase purchase =
+                purchaseBindingSource.Current as Purchase;
+                if (purchase != null)
                 {
-                    if (dataContext.Entry<Sale>(sale).State == EntityState.Detached)
-                        dataContext.Set<Sale>().Attach(sale);
-                    if (sale.Id == 0)
-                        dataContext.Entry<Sale>(sale).State = EntityState.Added;
+                    if (dataContext.Entry<Purchase>(purchase).State == EntityState.Detached)
+                        dataContext.Set<Purchase>().Attach(purchase);
+                    if (purchase.Id == 0)
+                        dataContext.Entry<Purchase>(purchase).State = EntityState.Added;
                     else
-                        dataContext.Entry<Sale>(sale).State = EntityState.Modified;
+                        dataContext.Entry<Purchase>(purchase).State = EntityState.Modified;
                     dataContext.SaveChanges();
                     MetroFramework.MetroMessageBox.Show(this, "Vendedor guardado");
                     grdDatos.Refresh();
@@ -59,9 +59,9 @@ namespace LVAReciclajeTPDA
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                   Client client =
-                        clientBindingSource.Current as Client;
-                    if (client != null)
+                   Purchase client =
+                        purchaseBindingSource.Current as Purchase;
+                    if (purchase != null)
                         client.ImageUrl = ofd.FileName;
 
                 }
@@ -71,8 +71,8 @@ namespace LVAReciclajeTPDA
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             pnlDatos.Enabled = true;
-            saleBindingSource.Add(new Sale());
-            saleBindingSource.MoveLast();
+            purchaseBindingSource.Add(new Purchase());
+            purchaseBindingSource.MoveLast();
 
         }
 
@@ -80,8 +80,8 @@ namespace LVAReciclajeTPDA
         {
             pnlDatos.Enabled = true;
             txtCompany.Focus();
-            Sale sale =
-                saleBindingSource.Current as Sale;
+            Purchase purchase =
+                purchaseBindingSource.Current as Purchase;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
