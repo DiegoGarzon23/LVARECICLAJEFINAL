@@ -230,6 +230,14 @@
     <Compile Include="Migrations\202004292158137_prueba7.designer.cs">
       <DependentUpon>202004292158137_prueba7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004292351130_prueba8.cs" />
+    <Compile Include="Migrations\202004292351130_prueba8.designer.cs">
+      <DependentUpon>202004292351130_prueba8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004300006026_Final.cs" />
+    <Compile Include="Migrations\202004300006026_Final.designer.cs">
+      <DependentUpon>202004300006026_Final.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -283,6 +291,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004292158137_prueba7.resx">
       <DependentUpon>202004292158137_prueba7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004292351130_prueba8.resx">
+      <DependentUpon>202004292351130_prueba8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004300006026_Final.resx">
+      <DependentUpon>202004300006026_Final.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

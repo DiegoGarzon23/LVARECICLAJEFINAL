@@ -6,19 +6,12 @@ namespace LVAReciclajeTPDA.Data
 {
     public class PurchaseDetail: IEntity
     {
-        [Key]
+        
         public int Id { get; set; }
-        [Required]
-        [StringLength(20)]
+        
         public string Name { get; set; }
-        [Required]
-        [DataType(DataType.Date)]
-        public DateTime AssingmentDate { get; set; }
-        [Required]
-        [DataType(DataType.Date)]
-        public DateTime TerminationDate { get; set; }
-        [Required]
-        [StringLength(20)]
+        
+        public string AssingmentDate { get; set; }
         public string Description { get; set; }
        
         public Sale Sale { get; set; }
