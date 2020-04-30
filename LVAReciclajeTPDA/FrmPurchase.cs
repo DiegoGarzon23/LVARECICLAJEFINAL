@@ -94,16 +94,16 @@ namespace LVAReciclajeTPDA
             {
                 using (DataContext dataContext = new DataContext())
                 {
-                    Sale sale =
-                        saleBindingSource.Current as Sale;
-                    if (sale != null)
+                    Purchase purchase =
+                        purchaseBindingSource.Current as Purchase;
+                    if (purchase != null)
                     {
-                        if (dataContext.Entry<Sale>(sale).State == EntityState.Detached)
-                            dataContext.Set<Sale>().Attach(sale);
-                        dataContext.Entry<Sale>(sale).State = EntityState.Deleted;
+                        if (dataContext.Entry<Purchase>(purchase).State == EntityState.Detached)
+                            dataContext.Set<Purchase>().Attach(purchase);
+                        dataContext.Entry<Purchase>(purchase).State = EntityState.Deleted;
                         dataContext.SaveChanges();
                         MetroFramework.MetroMessageBox.Show(this, "Vendedor eliminado");
-                        saleBindingSource.RemoveCurrent();
+                        purchaseBindingSource.RemoveCurrent();
                         pnlDatos.Enabled = false;
                     }
                 }
@@ -113,8 +113,13 @@ namespace LVAReciclajeTPDA
         private void btnSalir_Click(object sender, EventArgs e)
         {
             pnlDatos.Enabled = false;
-            saleBindingSource.ResetBindings(false);
-            FrmSale_Load(sender, e);
+            purchaseBindingSource.ResetBindings(false);
+            FrmPurchase_Load(sender, e);
+        }
+
+        private void grdDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
