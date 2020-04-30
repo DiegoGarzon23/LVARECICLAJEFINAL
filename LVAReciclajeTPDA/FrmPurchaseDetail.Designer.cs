@@ -41,6 +41,7 @@
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseDetailBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.txtFecha = new MetroFramework.Controls.MetroTextBox();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.lblName = new MetroFramework.Controls.MetroLabel();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
@@ -53,7 +54,6 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
-            this.txtFecha = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailBindingSource1)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -173,6 +173,37 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            // 
+            // txtFecha
+            // 
+            // 
+            // 
+            // 
+            this.txtFecha.CustomButton.Image = null;
+            this.txtFecha.CustomButton.Location = new System.Drawing.Point(284, 1);
+            this.txtFecha.CustomButton.Name = "";
+            this.txtFecha.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFecha.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtFecha.CustomButton.TabIndex = 1;
+            this.txtFecha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtFecha.CustomButton.UseSelectable = true;
+            this.txtFecha.CustomButton.Visible = false;
+            this.txtFecha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseDetailBindingSource1, "AssingmentDate", true));
+            this.txtFecha.Lines = new string[0];
+            this.txtFecha.Location = new System.Drawing.Point(123, 70);
+            this.txtFecha.MaxLength = 32767;
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.PasswordChar = '\0';
+            this.txtFecha.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFecha.SelectedText = "";
+            this.txtFecha.SelectionLength = 0;
+            this.txtFecha.SelectionStart = 0;
+            this.txtFecha.ShortcutsEnabled = true;
+            this.txtFecha.Size = new System.Drawing.Size(306, 23);
+            this.txtFecha.TabIndex = 22;
+            this.txtFecha.UseSelectable = true;
+            this.txtFecha.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtFecha.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtName
             // 
@@ -362,37 +393,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseSelectable = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtFecha
-            // 
-            // 
-            // 
-            // 
-            this.txtFecha.CustomButton.Image = null;
-            this.txtFecha.CustomButton.Location = new System.Drawing.Point(284, 1);
-            this.txtFecha.CustomButton.Name = "";
-            this.txtFecha.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtFecha.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtFecha.CustomButton.TabIndex = 1;
-            this.txtFecha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtFecha.CustomButton.UseSelectable = true;
-            this.txtFecha.CustomButton.Visible = false;
-            this.txtFecha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.purchaseDetailBindingSource1, "Name", true));
-            this.txtFecha.Lines = new string[0];
-            this.txtFecha.Location = new System.Drawing.Point(123, 70);
-            this.txtFecha.MaxLength = 32767;
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.PasswordChar = '\0';
-            this.txtFecha.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtFecha.SelectedText = "";
-            this.txtFecha.SelectionLength = 0;
-            this.txtFecha.SelectionStart = 0;
-            this.txtFecha.ShortcutsEnabled = true;
-            this.txtFecha.Size = new System.Drawing.Size(306, 23);
-            this.txtFecha.TabIndex = 22;
-            this.txtFecha.UseSelectable = true;
-            this.txtFecha.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtFecha.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // FrmPurchaseDetail
             // 
