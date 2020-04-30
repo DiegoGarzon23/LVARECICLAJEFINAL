@@ -26,5 +26,95 @@ namespace LVAReciclajeTPDA
         {
 
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            using (DataContext dataContext = new DataContext())
+            {
+                Sale sale =
+                saleBindingSource.Current as Sale;
+                if (sale != null)
+                {
+                    if (dataContext.Entry<Sale>(sale).State == EntityState.Detached)
+                        dataContext.Set<Sale>().Attach(sale);
+                    if (sale.Id == 0)
+                        dataContext.Entry<Sale>(sale).State = EntityState.Added;
+                    else
+                        dataContext.Entry<Sale>(sale).State = EntityState.Modified;
+                    dataContext.SaveChanges();
+                    MetroFramework.MetroMessageBox.Show(this, "Vendedor guardado");
+                    grdDatos.Refresh();
+                    pnlDatos.Enabled = false;
+                }
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd =
+               new OpenFileDialog()
+               {
+                   Filter = "archivos GIF|*.gif|archivos JPEG|*.jpg|archivos PNG|*.png|Todos los archivos|*.*"
+               })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                   Client client =
+                        clientBindingSource.Current as Client;
+                    if (client != null)
+                        client.ImageUrl = ofd.FileName;
+
+                }
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = true;
+            saleBindingSource.Add(new Sale());
+            saleBindingSource.MoveLast();
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = true;
+            txtCompany.Focus();
+            Sale sale =
+                saleBindingSource.Current as Sale;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MetroFramework.MetroMessageBox.Show(this,
+             "¿Quieres eliminar el registro?",
+             "Eliminar",
+             MessageBoxButtons.OKCancel,
+             MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                using (DataContext dataContext = new DataContext())
+                {
+                    Sale sale =
+                        saleBindingSource.Current as Sale;
+                    if (sale != null)
+                    {
+                        if (dataContext.Entry<Sale>(sale).State == EntityState.Detached)
+                            dataContext.Set<Sale>().Attach(sale);
+                        dataContext.Entry<Sale>(sale).State = EntityState.Deleted;
+                        dataContext.SaveChanges();
+                        MetroFramework.MetroMessageBox.Show(this, "Vendedor eliminado");
+                        saleBindingSource.RemoveCurrent();
+                        pnlDatos.Enabled = false;
+                    }
+                }
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = false;
+            saleBindingSource.ResetBindings(false);
+            FrmSale_Load(sender, e);
+        }
     }
 }
