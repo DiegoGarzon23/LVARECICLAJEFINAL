@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.txtDescr = new MetroFramework.Controls.MetroTextBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbTipoProducto = new MetroFramework.Controls.MetroComboBox();
             this.lblTipoProducto = new MetroFramework.Controls.MetroLabel();
             this.txtCode = new MetroFramework.Controls.MetroTextBox();
@@ -53,7 +54,6 @@
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
             this.btnSalirr = new MetroFramework.Controls.MetroButton();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,8 +64,8 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatos
@@ -125,6 +125,10 @@
             this.txtDescr.UseSelectable = true;
             this.txtDescr.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDescr.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Product);
             // 
             // cmbTipoProducto
             // 
@@ -543,10 +547,6 @@
             this.grdDatos.Size = new System.Drawing.Size(744, 110);
             this.grdDatos.TabIndex = 54;
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(LVAReciclajeTPDA.Data.Product);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -606,7 +606,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 488);
+            this.ClientSize = new System.Drawing.Size(1045, 488);
             this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.btnSalirr);
             this.Controls.Add(this.btnEliminar);
@@ -619,8 +619,8 @@
             this.Load += new System.EventHandler(this.FrmProduct_Load);
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
