@@ -43,7 +43,7 @@ namespace LVAReciclajeTPDA
                     else
                         dataContext.Entry<Purchase>(purchase).State = EntityState.Modified;
                     dataContext.SaveChanges();
-                    MetroFramework.MetroMessageBox.Show(this, "Vendedor guardado");
+                    MetroFramework.MetroMessageBox.Show(this, "Compra  guardada exitosamente");
                     grdDatos.Refresh();
                     pnlDatos.Enabled = false;
                 }
@@ -55,15 +55,13 @@ namespace LVAReciclajeTPDA
             using (OpenFileDialog ofd =
                new OpenFileDialog()
                {
-                   Filter = "archivos GIF|*.gif|archivos JPEG|*.jpg|archivos PNG|*.png|Todos los archivos|*.*"
+                  
                })
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                    Purchase client =
-                        purchaseBindingSource.Current as Purchase;
-                    if (purchase != null)
-                        client.ImageUrl = ofd.FileName;
+                        purchaseBindingSource.Current as Purchase;   
 
                 }
             }
@@ -103,7 +101,7 @@ namespace LVAReciclajeTPDA
                             dataContext.Set<Purchase>().Attach(purchase);
                         dataContext.Entry<Purchase>(purchase).State = EntityState.Deleted;
                         dataContext.SaveChanges();
-                        MetroFramework.MetroMessageBox.Show(this, "Vendedor eliminado");
+                        MetroFramework.MetroMessageBox.Show(this, "Compra eliminada");
                         purchaseBindingSource.RemoveCurrent();
                         pnlDatos.Enabled = false;
                     }
